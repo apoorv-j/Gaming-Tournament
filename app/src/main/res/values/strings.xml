@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Gaming Tournament</string>
+    <string name="title_ongoing">Ongoing</string>
+    <string name="title_play">Play</string>
+    <string name="title_result">Result</string>
+    <string name="title_me">Me</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_earn">Earn</string>
+    <string name="title_activity_match_detail">MatchDetailActivity</string>
+    <string name="lorem_ipsum">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</string>
+    <string name="title_activity_result_detail">ResultDetailActivity</string>
+</resources>
