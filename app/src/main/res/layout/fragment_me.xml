@@ -168,30 +168,13 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/refer"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="4dp"
-            android:background="@drawable/bg_white"
-            android:drawableLeft="@drawable/ic_group_add"
-            android:drawableRight="@drawable/ic_keyboard_arrow_right"
-            android:paddingStart="16dp"
-            android:drawablePadding="16dp"
-            android:paddingEnd="16dp"
-            android:text="Refer and Earn"
-            app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
-            app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
 
         <TextView
             android:id="@+id/profile"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="4dp"
             android:background="@drawable/bg_white"
             android:drawableLeft="@drawable/ic_account_circle_black_24dp"
@@ -203,7 +186,7 @@
             app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
-            app:layout_constraintTop_toBottomOf="@+id/refer" />
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
 
         <TextView
             android:id="@+id/wallet"
@@ -244,7 +227,7 @@
             app:layout_constraintTop_toBottomOf="@+id/wallet" />
 
         <TextView
-            android:id="@+id/top_player"
+            android:id="@+id/tNc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -252,17 +235,22 @@
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="100dp"
             android:background="@drawable/bg_white"
-            android:drawableLeft="@drawable/ic_directions_run_black_24dp"
+            android:drawableLeft="@drawable/ic_pageview_black_24dp"
             android:drawableRight="@drawable/ic_keyboard_arrow_right"
             android:drawablePadding="16dp"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:text="Top Players"
+            android:text="Terms and Conditions"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
-            app:layout_constraintTop_toBottomOf="@+id/stats" />
+            app:layout_constraintTop_toBottomOf="@+id/stats"
+            android:clickable="true"
+
+            />
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

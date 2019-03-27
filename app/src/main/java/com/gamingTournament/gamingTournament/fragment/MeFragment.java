@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.gamingTournament.gamingTournament.R;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 /**
@@ -20,6 +22,7 @@ public class MeFragment extends Fragment {
         // Required empty public constructor
     }
 
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -28,6 +31,22 @@ public class MeFragment extends Fragment {
         if (getActivity() != null && getActivity().getActionBar() != null){
             getActivity().getActionBar().hide();
         }
+
+        TextView tnc;
+        tnc = view.findViewById(R.id.tNc);
+        tnc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Terms and Conditions")
+                        .setMessage(R.string.TnC)
+                        .show();
+            }
+        });
+
+
+
+
 
         return view;
     }

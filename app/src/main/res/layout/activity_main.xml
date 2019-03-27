@@ -18,7 +18,22 @@
             android:layout_height="wrap_content"
             android:titleTextColor="@color/white"
             android:navigationIcon="@drawable/app_icon"
-            android:title="@string/app_name"/>
+            android:title="@string/app_name">
+
+        <TextView
+            android:text="₹ 0"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="@drawable/background"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingEnd="24dp"
+            android:paddingStart="24dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        </android.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 

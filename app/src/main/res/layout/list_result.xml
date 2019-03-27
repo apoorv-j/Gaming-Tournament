@@ -29,7 +29,7 @@
             android:layout_height="54dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
-            android:src="@drawable/playerzon"
+            android:src="@drawable/game_logo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image" />
 
