@@ -31,10 +31,6 @@ public class ResultFragment extends Fragment implements PubgResultAdapter.OnItem
         View view = inflater.inflate(R.layout.fragment_result, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
 
-        if (getActivity() != null && getActivity().getActionBar() != null){
-            getActivity().getActionBar().show();
-        }
-
         LinearLayoutManager manager = new LinearLayoutManager(this.getContext());
         PubgResultAdapter adapter = new PubgResultAdapter(this);
 

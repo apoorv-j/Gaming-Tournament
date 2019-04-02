@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.PrivacyPolicyFragment"
+    tools:context=".fragment.RefundFragment"
     android:background="@color/white">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Privacy Policy"
+        android:text="Refund Policy"
         android:textStyle="bold"
         android:textSize="40dp"
         android:textAlignment="center"
@@ -21,12 +21,11 @@
         android:layout_marginTop="60dp"
         android:scrollbars="vertical"
         >
-    <TextView
-        android:layout_width="match_parent"
-        android:padding="4dp"
-        android:layout_height="match_parent"
-        android:text="@string/privacy_text"
-        android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/refundTextView"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:textColor="@color/black"/>
     </ScrollView>
-
 </FrameLayout>

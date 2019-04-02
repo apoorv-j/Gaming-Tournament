@@ -10,4 +10,10 @@ public class Util {
                 .replace(R.id.main_container, fragment)
                 .commit();
     }
+    public static void changeDrawerFragment(FragmentActivity fragmentActivity, Fragment fragment){
+        fragmentActivity.getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.main_constraint, fragment)
+                .commit();
+    }
 }

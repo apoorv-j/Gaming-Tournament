@@ -10,16 +10,26 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toolbar;
 
 import com.gamingTournament.gamingTournament.R;
+import com.gamingTournament.gamingTournament.Util;
+import com.gamingTournament.gamingTournament.fragment.AboutUsFragment;
+import com.gamingTournament.gamingTournament.fragment.ContactUsFragment;
+import com.gamingTournament.gamingTournament.fragment.PrivacyPolicyFragment;
+import com.gamingTournament.gamingTournament.fragment.PubgFragment;
+import com.gamingTournament.gamingTournament.fragment.RefundFragment;
+import com.gamingTournament.gamingTournament.fragment.tncFragment;
+import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentActivity;
 
-public class MainActivity extends FragmentActivity implements View.OnClickListener {
+public class MainActivity extends FragmentActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
         private ImageView image;
         private int n=0;
         private DrawerLayout drawer;
@@ -48,7 +58,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                             moveTaskToBack(true);
                         }
                     })
-                    .setMessage(R.string.TnC)
+                    .setMessage(R.string.privacy_text)
                     .show();
         }
 
@@ -62,6 +72,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         assert getActionBar()!=null;
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
+            NavigationView navigationView = findViewById(R.id.side_nav_bar);
+            navigationView.setNavigationItemSelectedListener(this);
 
        }
 
@@ -78,11 +90,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             n = v.getId();
         switch (n)
         {
-            case R.id.pubg_logo : clicklistener(PubgActivity.class);
+            case R.id.pubg_logo : Util.changeDrawerFragment(MainActivity.this, new PubgFragment());
                                   break;
         }
 
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -93,24 +106,40 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             case android.R.id.home : drawer.openDrawer(Gravity.LEFT);
             break;
 
-            case R.id.about_us :
-                break;
-
-            case R.id.contact_us :
-                break;
-
-            case R.id.privacy_policy :
-                break;
-
-            case R.id.terms_conditions:
-                break;
-
-            case R.id.refund_policy :
-                break;
-
-
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+            switch (item.getItemId()) {
+
+                case R.id.home: clicklistener(MainActivity.class);
+                    break;
+
+                case R.id.about_us: Util.changeDrawerFragment(MainActivity.this, new AboutUsFragment());
+                    drawer.closeDrawer(Gravity.LEFT);
+                    break;
+
+                case R.id.contact_us: Util.changeDrawerFragment(MainActivity.this, new ContactUsFragment());
+                    drawer.closeDrawer(Gravity.LEFT);
+                    break;
+
+                case R.id.privacy_policy:
+                    Util.changeDrawerFragment(MainActivity.this, new PrivacyPolicyFragment());
+                    drawer.closeDrawer(Gravity.LEFT);
+                    break;
+
+                case R.id.terms_conditions: Util.changeDrawerFragment(MainActivity.this, new tncFragment());
+                    drawer.closeDrawer(Gravity.LEFT);
+                    break;
+
+                case R.id.refund_policy: Util.changeDrawerFragment(MainActivity.this, new RefundFragment());
+                    drawer.closeDrawer(Gravity.LEFT);
+                    break;
+            }
+            return true;
     }
 }

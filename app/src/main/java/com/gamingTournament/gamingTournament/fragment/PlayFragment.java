@@ -31,10 +31,7 @@ public class PlayFragment extends Fragment implements PubgPlayAdapter.OnItemClic
         View view = inflater.inflate(R.layout.fragment_play, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
 
-        if (getActivity() != null && getActivity().getActionBar() != null){
-            getActivity().getActionBar().show();
-        }
-
+       
         LinearLayoutManager manager = new LinearLayoutManager(this.getContext());
         PubgPlayAdapter adapter = new PubgPlayAdapter(this);
 

@@ -32,9 +32,6 @@ public class OngoingFragment extends Fragment implements PubgOngoingAdapter.OnIt
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_ongoing, container, false);
 
-        if (getActivity() != null && getActivity().getActionBar() != null){
-            getActivity().getActionBar().show();
-        }
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
 

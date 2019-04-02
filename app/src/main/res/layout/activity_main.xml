@@ -35,7 +35,6 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:layout_marginTop="?android:attr/actionBarSize"
-       android:padding="40dp"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toTopOf="parent">
@@ -46,6 +45,9 @@
            android:layout_width="match_parent"
            android:layout_height="120dp"
            android:cropToPadding="true"
+           android:layout_marginTop="40dp"
+           android:layout_marginLeft="40dp"
+           android:layout_marginRight="40dp"
            android:src="@drawable/pubg_logo"
            android:backgroundTint="@color/white"
            android:onClick="onClick"
@@ -65,6 +67,8 @@
            android:layout_marginTop="20dp"
            android:background="@color/white"
            android:src="@drawable/freefire_logo"
+           android:layout_marginLeft="40dp"
+           android:layout_marginRight="40dp"
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toBottomOf="@id/pubg_logo">
@@ -80,6 +84,8 @@
            android:background="@color/white"
            android:onClick="onClick"
            android:src="@drawable/ludok"
+           android:layout_marginLeft="40dp"
+           android:layout_marginRight="40dp"
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toBottomOf="@id/freefire_logo">
@@ -95,6 +101,9 @@
            android:layout_marginTop="20dp"
            android:background="@color/white"
            android:src="@drawable/minim"
+           android:layout_marginLeft="40dp"
+           android:layout_marginRight="40dp"
+           android:layout_marginBottom="40dp"
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toBottomOf="@id/ludo_logo">
@@ -106,6 +115,7 @@
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/side_nav_bar"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginTop="?android:actionBarSize"

@@ -28,10 +28,6 @@ public class MeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_me, container, false);
 
-        if (getActivity() != null && getActivity().getActionBar() != null){
-            getActivity().getActionBar().hide();
-        }
-
         TextView tnc;
         tnc = view.findViewById(R.id.tNc);
         tnc.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +35,7 @@ public class MeFragment extends Fragment {
             public void onClick(View v) {
                 new AlertDialog.Builder(getActivity())
                         .setTitle("Terms and Conditions")
-                        .setMessage(R.string.TnC)
+                        .setMessage(R.string.privacy_text)
                         .show();
             }
         });
