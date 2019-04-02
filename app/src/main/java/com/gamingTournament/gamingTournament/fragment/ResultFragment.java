@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.gamingTournament.gamingTournament.R;
-import com.gamingTournament.gamingTournament.ResultAdapter;
+import com.gamingTournament.gamingTournament.PubgResultAdapter;
 import com.gamingTournament.gamingTournament.activity.ResultDetailActivity;
 
 import androidx.annotation.NonNull;
@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ResultFragment extends Fragment implements ResultAdapter.OnItemClickListener {
+public class ResultFragment extends Fragment implements PubgResultAdapter.OnItemClickListener {
 
     public ResultFragment() {
         // Required empty public constructor
@@ -36,7 +36,7 @@ public class ResultFragment extends Fragment implements ResultAdapter.OnItemClic
         }
 
         LinearLayoutManager manager = new LinearLayoutManager(this.getContext());
-        ResultAdapter adapter = new ResultAdapter(this);
+        PubgResultAdapter adapter = new PubgResultAdapter(this);
 
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(adapter);

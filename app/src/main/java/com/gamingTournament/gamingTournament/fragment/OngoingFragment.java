@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.gamingTournament.gamingTournament.OngoingAdapter;
+import com.gamingTournament.gamingTournament.PubgOngoingAdapter;
 import com.gamingTournament.gamingTournament.R;
 import com.gamingTournament.gamingTournament.activity.MatchDetailActivity;
 
@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class OngoingFragment extends Fragment implements OngoingAdapter.OnItemClickListener {
+public class OngoingFragment extends Fragment implements PubgOngoingAdapter.OnItemClickListener {
 
 
     public OngoingFragment() {
@@ -39,7 +39,7 @@ public class OngoingFragment extends Fragment implements OngoingAdapter.OnItemCl
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
 
         LinearLayoutManager manager = new LinearLayoutManager(this.getContext());
-        OngoingAdapter adapter = new OngoingAdapter(this);
+        PubgOngoingAdapter adapter = new PubgOngoingAdapter(this);
 
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(adapter);

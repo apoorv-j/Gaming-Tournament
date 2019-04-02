@@ -8,18 +8,17 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class PlayAdapter extends RecyclerView.Adapter<PlayAdapter.MyViewHolder> {
+public class PubgOngoingAdapter extends RecyclerView.Adapter<PubgOngoingAdapter.MyViewHolder> {
     private OnItemClickListener listener;
 
-    public PlayAdapter(OnItemClickListener listener){
+    public PubgOngoingAdapter(OnItemClickListener listener){
         this.listener = listener;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewHolder(LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.list_play, parent, false));
+        return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.list_play_ongoing, parent, false));
     }
 
     @Override

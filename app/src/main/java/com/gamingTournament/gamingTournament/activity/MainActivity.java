@@ -1,50 +1,30 @@
 package com.gamingTournament.gamingTournament.activity;
 
+import android.app.Activity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toolbar;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.gamingTournament.gamingTournament.R;
-import com.gamingTournament.gamingTournament.Util;
-import com.gamingTournament.gamingTournament.fragment.MeFragment;
-import com.gamingTournament.gamingTournament.fragment.OngoingFragment;
-import com.gamingTournament.gamingTournament.fragment.PlayFragment;
-import com.gamingTournament.gamingTournament.fragment.ResultFragment;
 
-import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentActivity;
 
-public class MainActivity extends FragmentActivity {
-
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+public class MainActivity extends FragmentActivity implements View.OnClickListener {
+        private ImageView image;
+        private int n=0;
+        private DrawerLayout drawer;
+        private ActionBarDrawerToggle mToggle;
         @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_ongoing:
-                    Util.changeFragment(MainActivity.this, new OngoingFragment());
-                    return true;
-                case R.id.navigation_play:
-                    Util.changeFragment(MainActivity.this, new PlayFragment());
-                    return true;
-                case R.id.navigation_me:
-                    Util.changeFragment(MainActivity.this, new MeFragment());
-                    return true;
-                case R.id.navigation_result:
-                    Util.changeFragment(MainActivity.this, new ResultFragment());
-                    return true;
-
-                           }
-            return false;
-        }
-    };
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -72,11 +52,65 @@ public class MainActivity extends FragmentActivity {
                     .show();
         }
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar1);
         setActionBar(toolbar);
 
-        BottomNavigationView navigation = findViewById(R.id.bottom_nav_bar);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        drawer = findViewById(R.id.drawer_layout);
+        mToggle = new ActionBarDrawerToggle(this,drawer,R.string.open,R.string.close);
+        drawer.addDrawerListener(mToggle);
+        mToggle.syncState();
+        assert getActionBar()!=null;
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+       }
+
+       public void clicklistener(Class<? extends Activity> c)
+       {
+           Intent intent =new Intent(MainActivity.this,c);
+           startActivity(intent);
+       }
+
+
+    @Override
+    public void onClick(View v) {
+
+            n = v.getId();
+        switch (n)
+        {
+            case R.id.pubg_logo : clicklistener(PubgActivity.class);
+                                  break;
+        }
+
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId())
+        {
+
+            case android.R.id.home : drawer.openDrawer(Gravity.LEFT);
+            break;
+
+            case R.id.about_us :
+                break;
+
+            case R.id.contact_us :
+                break;
+
+            case R.id.privacy_policy :
+                break;
+
+            case R.id.terms_conditions:
+                break;
+
+            case R.id.refund_policy :
+                break;
+
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }

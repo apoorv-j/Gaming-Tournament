@@ -8,18 +8,18 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.MyViewHolder> {
+public class PubgResultAdapter extends RecyclerView.Adapter<PubgResultAdapter.MyViewHolder> {
 
     private OnItemClickListener listener;
 
-    public ResultAdapter(OnItemClickListener listener) {
+    public PubgResultAdapter(OnItemClickListener listener) {
         this.listener = listener;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.list_result, parent, false));
+        return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.list_pubg_result, parent, false));
     }
 
     @Override

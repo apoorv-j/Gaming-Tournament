@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:titleTextColor="@color/white"
+            android:navigationIcon="@drawable/app_icon"
+            android:title="@string/app_name">
+
+            <TextView
+                android:text="₹ 0"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="@drawable/background"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingEnd="24dp"
+                android:paddingStart="24dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </android.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/main_container"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        tools:layout="@layout/fragment_ongoing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemTextColor="@drawable/nav_color"
+        app:itemIconTint="@drawable/nav_color"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        android:background="?android:attr/windowBackground"
+        android:layout_gravity="bottom"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/navigation" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

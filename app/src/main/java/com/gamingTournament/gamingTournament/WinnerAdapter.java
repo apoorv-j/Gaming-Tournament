@@ -12,7 +12,7 @@ public class WinnerAdapter extends RecyclerView.Adapter<WinnerAdapter.MyViewHold
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.list_winner, parent, false));
+        return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.list_pubg_winner, parent, false));
     }
 
     @Override

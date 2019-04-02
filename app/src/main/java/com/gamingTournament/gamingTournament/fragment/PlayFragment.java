@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.gamingTournament.gamingTournament.PlayAdapter;
+import com.gamingTournament.gamingTournament.PubgPlayAdapter;
 import com.gamingTournament.gamingTournament.R;
 import com.gamingTournament.gamingTournament.activity.MatchDetailActivity;
 
@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PlayFragment extends Fragment implements PlayAdapter.OnItemClickListener {
+public class PlayFragment extends Fragment implements PubgPlayAdapter.OnItemClickListener {
 
     public PlayFragment() {
         // Required empty public constructor
@@ -36,7 +36,7 @@ public class PlayFragment extends Fragment implements PlayAdapter.OnItemClickLis
         }
 
         LinearLayoutManager manager = new LinearLayoutManager(this.getContext());
-        PlayAdapter adapter = new PlayAdapter(this);
+        PubgPlayAdapter adapter = new PubgPlayAdapter(this);
 
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(adapter);
