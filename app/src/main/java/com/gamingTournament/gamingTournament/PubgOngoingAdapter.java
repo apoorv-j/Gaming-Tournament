@@ -18,7 +18,7 @@ public class PubgOngoingAdapter extends RecyclerView.Adapter<PubgOngoingAdapter.
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.list_play_ongoing, parent, false));
+        return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.list_pubg_ongoing, parent, false));
     }
 
     @Override

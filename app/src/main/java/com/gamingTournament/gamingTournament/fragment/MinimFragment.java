@@ -19,10 +19,10 @@ import androidx.annotation.NonNull;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PubgFragment extends Fragment {
+public class MinimFragment extends Fragment {
 
 
-    public PubgFragment() {
+    public MinimFragment() {
         // Required empty public constructor
     }
 
@@ -48,17 +48,10 @@ public class PubgFragment extends Fragment {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_ongoing:
-                    Util.changeFragment(Objects.requireNonNull(getActivity()), new OngoingFragment());
-                    return true;
                 case R.id.navigation_play:
-                    Util.changeFragment(Objects.requireNonNull(getActivity()), new PlayFragment());
-                    return true;
-                case R.id.navigation_me:
-                    Util.changeFragment(Objects.requireNonNull(getActivity()), new MeFragment());
+                    Util.changeFragment(Objects.requireNonNull(getActivity()), new MinimPlayFragment());
                     return true;
                 case R.id.navigation_result:
-                    Util.changeFragment(Objects.requireNonNull(getActivity()), new ResultFragment());
-                    return true;
 
             }
             return true;

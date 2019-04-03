@@ -50,5 +50,6 @@ public class PubgPlayAdapter extends RecyclerView.Adapter<PubgPlayAdapter.MyView
 
     public interface OnItemClickListener{
         public void onClickListener(int position);
+
     }
 }

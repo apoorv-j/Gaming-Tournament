@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.AboutUsFragment"
-    android:background="@color/white">
-
+    tools:context=".activity.PaymentPage"
+    android:orientation="vertical"
+    android:background="#F8F8F8">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="About Us"
+        android:text="Payment Page"
         android:textStyle="bold"
         android:textSize="40dp"
         android:textAlignment="center"
         android:textColor="@color/black"
         />
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
-        android:scrollbars="vertical"
-        >
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="4dp"
-            android:text="@string/aboutus_text"
+            android:layout_marginTop="40dp"
+            android:textSize="30dp"
+            android:text="On Clicking JOIN this page will direct to the Payment gateway. It will return to this same page after successful payment and will provide user the room id and password. "
             android:textColor="@color/black"/>
-    </ScrollView>
 
-</FrameLayout>
+</LinearLayout>

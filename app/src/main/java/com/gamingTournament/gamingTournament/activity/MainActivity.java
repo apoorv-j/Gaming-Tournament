@@ -17,6 +17,9 @@ import com.gamingTournament.gamingTournament.R;
 import com.gamingTournament.gamingTournament.Util;
 import com.gamingTournament.gamingTournament.fragment.AboutUsFragment;
 import com.gamingTournament.gamingTournament.fragment.ContactUsFragment;
+import com.gamingTournament.gamingTournament.fragment.FreefireFragment;
+import com.gamingTournament.gamingTournament.fragment.LudoFragment;
+import com.gamingTournament.gamingTournament.fragment.MinimFragment;
 import com.gamingTournament.gamingTournament.fragment.PrivacyPolicyFragment;
 import com.gamingTournament.gamingTournament.fragment.PubgFragment;
 import com.gamingTournament.gamingTournament.fragment.RefundFragment;
@@ -92,6 +95,23 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         {
             case R.id.pubg_logo : Util.changeDrawerFragment(MainActivity.this, new PubgFragment());
                                   break;
+            case R.id.freefire_logo : Util.changeDrawerFragment(MainActivity.this, new FreefireFragment());
+                break;
+
+            case R.id.ludo_logo : Util.changeDrawerFragment(MainActivity.this, new LudoFragment());
+                break;
+
+            case R.id.minim_logo : Util.changeDrawerFragment(MainActivity.this, new MinimFragment());
+                break;
+
+            case R.id.textView15 : clicklistener(PaymentPage.class);
+                                    break;
+            case R.id.textView150 : clicklistener(PaymentPage.class);
+                break;
+            case R.id.textView151 : clicklistener(PaymentPage.class);
+                break;
+            case R.id.textView152 : clicklistener(PaymentPage.class);
+                break;
         }
 
     }
