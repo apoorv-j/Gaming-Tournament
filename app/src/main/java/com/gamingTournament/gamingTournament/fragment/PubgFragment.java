@@ -53,9 +53,6 @@ public class PubgFragment extends Fragment {
                 case R.id.navigation_play:
                     Util.changeFragment(Objects.requireNonNull(getActivity()), new PlayFragment());
                     return true;
-                case R.id.navigation_me:
-                    Util.changeFragment(Objects.requireNonNull(getActivity()), new MeFragment());
-                    return true;
                 case R.id.navigation_result:
                     Util.changeFragment(Objects.requireNonNull(getActivity()), new ResultFragment());
                     return true;

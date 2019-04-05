@@ -16,8 +16,4 @@
         android:icon="@drawable/ic_content_paste_black_24dp"
         android:title="@string/title_result" />
 
-    <item
-        android:id="@+id/navigation_me"
-        android:icon="@drawable/ic_insert_emoticon"
-        android:title="@string/title_me" />
-</menu>
+    </menu>

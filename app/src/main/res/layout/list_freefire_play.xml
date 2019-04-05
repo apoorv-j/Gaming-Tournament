@@ -117,7 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="$ 100"
+            android:text="₹ 100"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/textView300"
             app:layout_constraintStart_toStartOf="@+id/textView300"
@@ -129,7 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="$ 5"
+            android:text="₹ 5"
             app:layout_constraintEnd_toEndOf="@+id/textView500"
             app:layout_constraintStart_toStartOf="@+id/textView500"
             app:layout_constraintTop_toBottomOf="@+id/textView500" />
@@ -140,7 +140,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="$ 10"
+            android:text="₹ 10"
             app:layout_constraintEnd_toEndOf="@+id/textView400"
             app:layout_constraintStart_toStartOf="@+id/textView400"
             app:layout_constraintTop_toBottomOf="@+id/textView400" />
