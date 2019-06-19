@@ -1,29 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.PaymentPage"
-    android:orientation="vertical"
-    android:background="#F8F8F8">
-    <TextView
+    android:background="#F8F8F8"
+    tools:context=".activity.PaymentPage">
+
+            <TextView
+                android:id="@+id/version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_white"
+                android:elevation="4dp"
+                android:text="Version: TPP"
+                app:layout_constraintStart_toEndOf="@+id/type"
+                app:layout_constraintTop_toTopOf="@+id/type" />
+
+            <TextView
+                android:id="@+id/map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_white"
+                android:elevation="4dp"
+                android:text="Map: England"
+                app:layout_constraintStart_toEndOf="@+id/version"
+                app:layout_constraintTop_toTopOf="@+id/type" />
+
+
+            <TextView
+                android:id="@+id/dateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_white"
+                android:elevation="4dp"
+                android:text="Match Shedule: 03/03/2019 at 01:00PM"
+                app:layout_constraintStart_toStartOf="@+id/type"
+                app:layout_constraintTop_toBottomOf="@+id/type" />
+
+            <TextView
+                android:id="@+id/roomID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Room ID: "
+                android:background="@drawable/bg_white"
+                android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintStart_toStartOf="@+id/TV24"
+                app:layout_constraintTop_toBottomOf="@+id/TV24" />
+
+            <TextView
+                android:id="@+id/roomPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Room Password: "
+                android:background="@drawable/bg_white"
+                android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintStart_toStartOf="@+id/roomID"
+                app:layout_constraintTop_toBottomOf="@+id/roomID" />
+
+
+
+    <LinearLayout
+        android:id="@+id/image"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Payment Page"
-        android:textStyle="bold"
-        android:textSize="40dp"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        />
+        android:layout_height="130dp"
+        android:background="@color/colorPrimary"
+        android:padding="20dp">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/game_logo"/>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="4dp"
-            android:layout_marginTop="40dp"
-            android:textSize="30dp"
-            android:text="On Clicking JOIN this page will direct to the Payment gateway. It will return to this same page after successful payment and will provide user the room id and password. "
-            android:textColor="@color/black"/>
+            android:layout_marginTop="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-</LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gaming"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tournament"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Mtach #1344"
+                android:textSize="30dp"
+                android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#12AC9C"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image" />
+
+            <TextView
+                android:id="@+id/TV24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Room Details"
+                android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#12AC9C"
+                android:textSize="30dp"
+                app:layout_constraintStart_toStartOf="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/dateTime" />
+
+
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_white"
+                android:elevation="4dp"
+                android:text="Type: Duo"
+                app:layout_constraintStart_toStartOf="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <TextView
+                android:id="@+id/TV28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Important Note"
+                android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#12AC9C"
+                app:layout_constraintStart_toStartOf="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/roomPass" />
+
+            <TextView
+                android:id="@+id/TV29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/bg_white"
+                android:elevation="4dp"
+                android:text="Take the screenshot of this screen to note the match and room details. Thes details won't be provided again."
+                app:layout_constraintStart_toStartOf="@+id/type"
+                app:layout_constraintTop_toBottomOf="@+id/TV28" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

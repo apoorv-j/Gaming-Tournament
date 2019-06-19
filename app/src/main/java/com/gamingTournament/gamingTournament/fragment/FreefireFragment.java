@@ -48,10 +48,14 @@ public class FreefireFragment extends Fragment {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_ongoing:
+                    Util.changeFragment(Objects.requireNonNull(getActivity()), new FreefireOngoingFragment());
+                    break;
                 case R.id.navigation_play:
                     Util.changeFragment(Objects.requireNonNull(getActivity()), new FreefirePlayFragment());
-                    return true;
+                    break;
                 case R.id.navigation_result:
+                    Util.changeFragment(Objects.requireNonNull(getActivity()), new FreefireResultFragment());
+                    break;
 
             }
             return true;

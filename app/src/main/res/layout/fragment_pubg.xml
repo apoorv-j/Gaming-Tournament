@@ -22,6 +22,7 @@
             app:itemIconTint="@drawable/nav_color"
             app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
             android:background="?android:attr/windowBackground"
+            app:backgroundTint="@color/colorPrimaryDark"
             android:layout_gravity="bottom"
             app:labelVisibilityMode="labeled"
             app:menu="@menu/navigation" />

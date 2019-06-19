@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lr_cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/boldBlackLetter"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/lr_image"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/lr_imageView"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/game_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lr_image" />
+
+        <TextView
+            android:id="@+id/lr_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Solo Time - Match #1344"
+            android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/lr_imageView"
+            app:layout_constraintTop_toTopOf="@+id/lr_imageView" />
+
+        <TextView
+            android:id="@+id/lr_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Time: 03/03/2019 at 11:30 AM"
+            app:layout_constraintStart_toStartOf="@+id/lr_textView"
+            app:layout_constraintTop_toBottomOf="@+id/lr_textView" />
+
+        <TextView
+            android:id="@+id/lr_textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="16dp"
+            android:text="WIN PRIZE"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lr_textView2" />
+
+        <TextView
+            android:id="@+id/lr_textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
+            android:text="ENTRY FEE"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lr_textView3" />
+
+
+        <TextView
+            android:id="@+id/lr_textView6"
+            style="@style/boldBlackLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="₹ 150"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/lr_textView3"
+            app:layout_constraintStart_toStartOf="@+id/lr_textView3"
+            app:layout_constraintTop_toBottomOf="@+id/lr_textView3" />
+
+
+        <TextView
+            android:id="@+id/lr_textView8"
+            style="@style/boldBlackLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="₹ 20"
+            app:layout_constraintEnd_toEndOf="@+id/lr_textView4"
+            app:layout_constraintStart_toStartOf="@+id/lr_textView4"
+            app:layout_constraintTop_toBottomOf="@+id/lr_textView4" />
+
+
+        <TextView
+            android:id="@+id/lr_textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Players Joined"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/lr_textView4"
+            app:layout_constraintStart_toEndOf="@+id/lr_textView3"
+            app:layout_constraintTop_toTopOf="@+id/lr_textView3" />
+
+
+        <TextView
+            android:id="@+id/lr_textView14"
+            style="@style/boldBlackLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="7"
+            app:layout_constraintEnd_toEndOf="@+id/lr_textView10"
+            app:layout_constraintStart_toStartOf="@+id/lr_textView10"
+            app:layout_constraintTop_toBottomOf="@+id/lr_textView10"  />
+
+        <TextView
+            android:id="@+id/lr_winner_result"
+            style="@style/boldBlackLetter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="WINNER"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lr_textView14" />
+
+        <TextView
+            android:id="@+id/lr_winner_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4297DF"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Player Name"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lr_winner_result">
+
+        </TextView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

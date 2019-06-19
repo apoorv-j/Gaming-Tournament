@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".fragment.ProfileFragment"
+    android:clickable="true"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="5dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:text="User Details"
+            android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+            android:textColor="#4297DF"
+            android:textAlignment="center"
+            android:autoSizeTextType="uniform"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_name"
+            android:textColor="#ff9100"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:textSize="15dp"
+            />
+        <AutoCompleteTextView
+            android:id="@+id/fullNameProfile"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_rect"
+            android:drawableLeft="@drawable/icon_person"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/icon_person"
+            android:hint="@string/hint_name"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/usernameReg"
+            android:textColor="#ff9100"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            />
+        <AutoCompleteTextView
+            android:id="@+id/UsernameProfile"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_rect"
+            android:drawableLeft="@drawable/icon_username"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/icon_username"
+            android:hint="@string/usernameReg"
+            android:paddingEnd="10dp"
+            android:paddingStart="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/emailReg"
+            android:textColor="#ff9100"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            />
+        <AutoCompleteTextView
+            android:id="@+id/EmailProfile"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_rect"
+            android:drawableLeft="@drawable/icon_mail"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/icon_mail"
+            android:hint="@string/emailReg"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_number"
+            android:textColor="#ff9100"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            />
+        <AutoCompleteTextView
+            android:id="@+id/phNumberProfile"
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_rect"
+            android:drawableLeft="@drawable/ic_phone"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_phone"
+            android:hint="@string/hint_number"
+            android:paddingEnd="10dp"
+            android:paddingStart="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/balanceProfile"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_stroked"
+            android:backgroundTint="@color/black"
+            android:elevation="4dp"
+            android:text="Balance: ₹ 0 "
+            android:textStyle="bold"
+            android:textColor="#009688"
+            android:autoSizeTextType="uniform"
+            android:padding="5dp"
+            android:gravity="center"
+          />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Reset Password"
+            android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+            android:textColor="#4297DF"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:autoSizeTextType="uniform"
+            android:padding="5dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/white"
+            android:backgroundTint="@color/black"
+            app:boxBackgroundColor="@color/black"
+            app:boxStrokeColor="#ff9100"
+            android:textColorHint="@color/gray"
+
+            >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/oldPasswordProfile"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:drawablePadding="10dp"
+            android:hint="Old Password"
+            android:paddingLeft="20dp"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textColorHint="#ff9100"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/white"
+            android:backgroundTint="@color/black"
+            app:boxBackgroundColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:boxStrokeColor="#ff9100"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/newPasswordProfile"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:drawablePadding="10dp"
+                android:hint="New Password"
+                android:paddingLeft="20dp"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textColorHint="#ff9100"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/btnResetPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/btnsignin_gradient"
+            android:text="RESET"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:clickable="true"
+            android:longClickable="true"/>
+    </LinearLayout>
+
+</ScrollView>

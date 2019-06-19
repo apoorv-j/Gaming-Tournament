@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    tools:context=".activity.MinimMatchDetailActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mmd_joinMatchDetails">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/mmd_textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_white"
+                android:elevation="4dp"
+                android:text="Entry Fee"
+                android:textColor="#424242"
+                app:layout_constraintStart_toEndOf="@+id/mmd_textView19"
+                app:layout_constraintTop_toTopOf="@+id/mmd_textView19" />
+
+            <TextView
+                android:id="@+id/mmd_textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white"
+                android:elevation="4dp"
+                android:layout_marginTop="10dp"
+                android:text="Match Shedule: 03/03/2019 at 01:00PM"
+                app:layout_constraintTop_toBottomOf="@id/mmd_textView19"
+                app:layout_constraintStart_toStartOf="@+id/mmd_textView19"
+                tools:layout_editor_absoluteY="370dp" />
+
+            <TextView
+                android:id="@+id/mmd_textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_white"
+                android:elevation="4dp"
+                android:text="Winning prize : $300"
+                android:textColor="#424242"
+                app:layout_constraintStart_toStartOf="@+id/mmd_textView24"
+                app:layout_constraintTop_toBottomOf="@+id/mmd_textView24" />
+            
+
+            <ImageView
+                android:id="@+id/mmd_image"
+                android:layout_width="0dp"
+                android:layout_height="225dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mmd_textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Soloo Time - Mtach #1344"
+                android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#12AC9C"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mmd_image" />
+
+            <TextView
+                android:id="@+id/mmd_textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Prize Details"
+                android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#12AC9C"
+                app:layout_constraintStart_toStartOf="@+id/mmd_textView18"
+                app:layout_constraintTop_toBottomOf="@+id/mmd_textView23" />
+
+            <TextView
+                android:id="@+id/minim_disclaimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/bg_white"
+                android:elevation="6dp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:text="Room ID and Password will be shown on this page,15 minutes before the Match Starts."
+                app:layout_constraintStart_toStartOf="@id/mmd_textView26"
+                app:layout_constraintTop_toBottomOf="@+id/mmd_textView26" />
+
+            <TextView
+                android:id="@+id/mmd_textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="About this Match"
+                android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#12AC9C"
+                app:layout_constraintStart_toStartOf="@+id/minim_disclaimer"
+                app:layout_constraintTop_toBottomOf="@+id/minim_disclaimer" />
+
+            <TextView
+                android:id="@+id/mmd_textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_white"
+                android:elevation="4dp"
+                android:text="Map:"
+                android:textColor="#424242"
+                app:layout_constraintStart_toStartOf="@+id/mmd_textView18"
+                app:layout_constraintTop_toBottomOf="@+id/mmd_textView18" />
+
+            <TextView
+                android:id="@+id/mmd_textView29"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="#424242"
+                android:text="@string/minimRules"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/mmd_textView28"
+                app:layout_constraintTop_toBottomOf="@+id/mmd_textView28" />
+
+            <TextView
+                android:id="@+id/mmd_participants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Participants List"
+                android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#12AC9C"
+                app:layout_constraintStart_toStartOf="@+id/mmd_textView29"
+                app:layout_constraintTop_toBottomOf="@+id/mmd_textView29" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_refresh"
+                android:text="  Refresh"
+                android:drawableLeft="@drawable/ic_refresh"
+                android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#12AC9C"
+                android:clickable="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="17dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mmd_textView29"
+                android:onClick="mmdParticipants"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mmd_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/mmd_participants"
+                app:layout_constraintTop_toBottomOf="@+id/mmd_participants"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/mmd_joinMatchDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JOIN"
+        android:textAlignment="center"
+        android:background="#008300"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_marginTop="2dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

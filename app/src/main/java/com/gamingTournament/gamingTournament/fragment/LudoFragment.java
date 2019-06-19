@@ -50,8 +50,10 @@ public class LudoFragment extends Fragment {
                 case R.id.navigation_ongoing:
                 case R.id.navigation_play:
                     Util.changeFragment(Objects.requireNonNull(getActivity()), new LudoPlayFragment());
-                    return true;
+                    break;
                 case R.id.navigation_result:
+                    Util.changeFragment(Objects.requireNonNull(getActivity()), new LudoResultFragment());
+                    break;
 
             }
             return true;

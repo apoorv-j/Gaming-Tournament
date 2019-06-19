@@ -6,19 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F8F8"
-    tools:context=".activity.MatchDetailActivity">
+    tools:context=".activity.PubgMatchDetailActivity">
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:scrollbars="none"
-        app:layout_constraintBottom_toTopOf="@+id/textView30"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/joinMatchDetails">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp"
+            >
+
 
             <TextView
                 android:id="@+id/textView20"
@@ -28,10 +31,13 @@
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
                 android:text="Version: TPP"
+                android:textColor="#424242"
                 app:layout_constraintStart_toEndOf="@+id/textView19"
-                app:layout_constraintTop_toTopOf="@+id/textView19" />
+                app:layout_constraintTop_toTopOf="@+id/textView19"
+                />
 
             <TextView
+                android:textColor="#424242"
                 android:id="@+id/textView21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -44,6 +50,7 @@
 
             <TextView
                 android:id="@+id/textView22"
+                android:textColor="#424242"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -55,6 +62,7 @@
 
             <TextView
                 android:id="@+id/textView25"
+                android:textColor="#424242"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -72,6 +80,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
+                android:textColor="#424242"
                 android:text="Match Shedule: 03/03/2019 at 01:00PM"
                 app:layout_constraintStart_toStartOf="@+id/textView19"
                 app:layout_constraintTop_toBottomOf="@+id/textView22" />
@@ -83,6 +92,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
+                android:textColor="#424242"
                 android:text="Winning prize : $300"
                 app:layout_constraintStart_toStartOf="@+id/textView24"
                 app:layout_constraintTop_toBottomOf="@+id/textView24" />
@@ -94,6 +104,7 @@
                 android:layout_marginStart="16dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
+                android:textColor="#424242"
                 android:text="Per Kill : $25"
                 app:layout_constraintStart_toEndOf="@+id/textView26"
                 app:layout_constraintTop_toTopOf="@+id/textView26" />
@@ -132,15 +143,31 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
             <TextView
+                android:id="@+id/pubg_disclaimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_white"
+                android:elevation="4dp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:text="Room ID and Password will be shown on this page,15 minutes before the Match Starts."
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+            <TextView
                 android:id="@+id/textView28"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 android:text="About this Match"
                 android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
                 android:textColor="#12AC9C"
-                app:layout_constraintStart_toStartOf="@+id/textView26"
-                app:layout_constraintTop_toBottomOf="@+id/textView26" />
+                app:layout_constraintStart_toStartOf="@id/pubg_disclaimer"
+                app:layout_constraintTop_toBottomOf="@id/pubg_disclaimer" />
 
             <TextView
                 android:id="@+id/textView19"
@@ -149,6 +176,7 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
+                android:textColor="#424242"
                 android:text="Type: Duo"
                 app:layout_constraintStart_toStartOf="@+id/textView18"
                 app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -159,25 +187,68 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:textColor="@color/black"
                 android:text="@string/pubgRules"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView28"
                 app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+            <TextView
+                android:id="@+id/participants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Participants List"
+                android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#12AC9C"
+                app:layout_constraintStart_toStartOf="@+id/textView29"
+                app:layout_constraintTop_toBottomOf="@+id/textView29" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_refresh"
+                android:text="  Refresh"
+                android:drawableLeft="@drawable/ic_refresh"
+                android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#12AC9C"
+                android:clickable="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="17dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView29"
+                android:onClick="refreshParticipants"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/md_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/participants"
+                app:layout_constraintTop_toBottomOf="@+id/participants"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 
     <TextView
-        android:id="@+id/textView30"
+        android:id="@+id/joinMatchDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#02F502"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="SPECTATE"
+        android:text="JOIN"
+        android:textAlignment="center"
+        android:background="#008300"
         android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_marginTop="2dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

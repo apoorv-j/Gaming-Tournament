@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/boldBlackLetter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/fo_image1"
+            android:layout_width="0dp"
+            android:layout_height="225dp"
+            android:src="@drawable/freefire_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/fo_imageView1"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/game_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fo_image1" />
+
+        <TextView
+            android:id="@+id/fo_textView000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Match"
+            android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/fo_textView180"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/fo_imageView1"
+            app:layout_constraintTop_toTopOf="@+id/fo_imageView1" />
+
+        <TextView
+            android:id="@+id/fo_textView180"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="#1344"
+            android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@+id/fo_textView000"
+            app:layout_constraintTop_toTopOf="@+id/fo_imageView1"
+            android:layout_marginLeft="12dp"
+
+            />
+        <TextView
+            android:id="@+id/fo_textView200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Time:"
+            app:layout_constraintStart_toStartOf="@+id/fo_textView000"
+            app:layout_constraintTop_toBottomOf="@+id/fo_textView000" />
+
+        <TextView
+            android:id="@+id/fo_textView190"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_marginTop="8dp"
+            android:text="03/03/2019 at 11:30 AM"
+            android:layout_marginLeft="12dp"
+            app:layout_constraintLeft_toRightOf="@id/fo_textView200"
+            app:layout_constraintTop_toBottomOf="@+id/fo_textView000" />
+
+        <TextView
+            android:id="@+id/fo_textView300"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="16dp"
+            android:text="WIN PRIZE"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fo_textView200" />
+
+        <TextView
+            android:id="@+id/fo_textView400"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
+            android:text="ENTRY FEE"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fo_textView300" />
+
+        <TextView
+            android:id="@+id/fo_textView500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PER KILL"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/fo_textView400"
+            app:layout_constraintStart_toEndOf="@+id/fo_textView300"
+            app:layout_constraintTop_toTopOf="@+id/fo_textView300" />
+
+        <TextView
+            android:id="@+id/fo_textView600"
+            style="@style/boldBlackLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="₹ 100"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/fo_textView300"
+            app:layout_constraintStart_toStartOf="@+id/fo_textView300"
+            app:layout_constraintTop_toBottomOf="@+id/fo_textView300" />
+
+        <TextView
+            android:id="@+id/fo_textView700"
+            style="@style/boldBlackLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="₹ 5"
+            app:layout_constraintEnd_toEndOf="@+id/fo_textView500"
+            app:layout_constraintStart_toStartOf="@+id/fo_textView500"
+            app:layout_constraintTop_toBottomOf="@+id/fo_textView500" />
+
+        <TextView
+            android:id="@+id/fo_textView800"
+            style="@style/boldBlackLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="₹ 10"
+            app:layout_constraintEnd_toEndOf="@+id/fo_textView400"
+            app:layout_constraintStart_toStartOf="@+id/fo_textView400"
+            app:layout_constraintTop_toBottomOf="@+id/fo_textView400" />
+
+        <TextView
+            android:id="@+id/fo_textView900"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="TYPE"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/fo_textView500"
+            app:layout_constraintStart_toEndOf="@+id/fo_textView300"
+            app:layout_constraintTop_toBottomOf="@+id/fo_textView600" />
+
+
+        <TextView
+            android:id="@+id/fo_textView110"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MAP"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/fo_textView400"
+            app:layout_constraintStart_toEndOf="@+id/fo_textView500"
+            app:layout_constraintTop_toTopOf="@+id/fo_textView900" />
+
+        <TextView
+            android:id="@+id/fo_textView120"
+            style="@style/boldBlackLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Solo"
+            app:layout_constraintEnd_toEndOf="@+id/fo_textView900"
+            app:layout_constraintStart_toStartOf="@+id/fo_textView900"
+            app:layout_constraintTop_toBottomOf="@+id/fo_textView900" />
+
+        <TextView
+            android:id="@+id/fo_textView130"
+            style="@style/boldBlackLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Bermuda"
+            app:layout_constraintEnd_toEndOf="@+id/fo_textView110"
+            app:layout_constraintStart_toStartOf="@+id/fo_textView110"
+            app:layout_constraintTop_toBottomOf="@+id/fo_textView110" />
+
+        <TextView
+            android:id="@+id/fo_textView15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:background="#008300"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="SPECTATE"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fo_textView130" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,30 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     >
-
+    <group android:id="@+id/drawer1"
+            android:checkableBehavior="single">
     <item
         android:id="@+id/home"
         android:title="Home"
+
+        android:icon="@drawable/ic_home_black_24dp"
         />
+    <item
+        android:id="@+id/profile"
+        android:title="My Profile"
+
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        />
+    <item
+        android:id="@+id/wallet"
+        android:title="My Wallet"
+
+        android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+        />
+    <item android:id="@+id/events"
+        android:title="Events"
+        android:icon="@drawable/ic_event_note_black_24dp"
+        />
+
+    <item android:id="@+id/top_players"
+            android:title="Top Players"
+            android:icon="@drawable/ic_winner"
+        />
+
+    </group>
+    <group android:id="@+id/drawer2"
+        android:checkableBehavior="single">
     <item
             android:id="@+id/about_us"
             android:title="About Us"
+
+        android:icon="@drawable/ic_info_black_24dp"
+
                     />
 
     <item
         android:id="@+id/contact_us"
-        android:title="Contact Us" />
+        android:title="Contact Us"
+
+        android:icon="@drawable/ic_support"/>
 
     <item
         android:id="@+id/privacy_policy"
-        android:title="Privacy Policy" />
+        android:title="Privacy Policy"
+
+        android:icon="@drawable/icon_privacy"/>
 
     <item
         android:id="@+id/terms_conditions"
-        android:title="Terms and Conditions" />
+        android:title="Terms and Conditions"
+
+        android:icon="@drawable/icon_tnc"/>
 
     <item
         android:id="@+id/refund_policy"
-        android:title="Refund Policy" />
+        android:title="Refund Policy"
+
+        android:icon="@drawable/ic_refund_icon"
+        />
+    </group>
+    <group android:id="@+id/drawer3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/shareApp"
+            android:title="Share App"
+
+            android:icon="@drawable/ic_share_black_24dp"
+            />
+        <item
+        android:id="@+id/logout"
+        android:title="Log Out"
+
+        android:icon="@drawable/ic_icon_logout"
+        />
+    </group>
 
 </menu>

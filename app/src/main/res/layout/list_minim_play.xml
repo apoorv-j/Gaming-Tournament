@@ -17,7 +17,7 @@
             android:id="@+id/image3"
             android:layout_width="0dp"
             android:layout_height="225dp"
-            android:src="@drawable/minim"
+            android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +42,7 @@
             android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
             android:textColor="@android:color/darker_gray"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="@id/textView180"
+            app:layout_constraintEnd_toEndOf="@id/textView182"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
             app:layout_constraintTop_toTopOf="@+id/imageView3" />
@@ -105,7 +105,7 @@
             android:id="@+id/textView522"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="PER KILL"
+            android:text="MAP"
             android:textSize="12sp"
             app:layout_constraintEnd_toStartOf="@+id/textView422"
             app:layout_constraintStart_toEndOf="@+id/textView322"
@@ -129,7 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="₹ 5"
+            android:text="Bermuda"
             app:layout_constraintEnd_toEndOf="@+id/textView522"
             app:layout_constraintStart_toStartOf="@+id/textView522"
             app:layout_constraintTop_toBottomOf="@+id/textView522" />
@@ -145,51 +145,6 @@
             app:layout_constraintStart_toStartOf="@+id/textView422"
             app:layout_constraintTop_toBottomOf="@+id/textView422" />
 
-        <TextView
-            android:id="@+id/textView922"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="TYPE"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView522"
-            app:layout_constraintStart_toEndOf="@+id/textView322"
-            app:layout_constraintTop_toBottomOf="@+id/textView622" />
-
-
-        <TextView
-            android:id="@+id/textView112"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="MAP"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView422"
-            app:layout_constraintStart_toEndOf="@+id/textView522"
-            app:layout_constraintTop_toTopOf="@+id/textView922" />
-
-        <TextView
-            android:id="@+id/textView122"
-            style="@style/boldBlackLetter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:text="Solo"
-            app:layout_constraintEnd_toEndOf="@+id/textView922"
-            app:layout_constraintStart_toStartOf="@+id/textView922"
-            app:layout_constraintTop_toBottomOf="@+id/textView922" />
-
-        <TextView
-            android:id="@+id/textView132"
-            style="@style/boldBlackLetter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:text="Bermuda"
-            app:layout_constraintEnd_toEndOf="@+id/textView112"
-            app:layout_constraintStart_toStartOf="@+id/textView112"
-            app:layout_constraintTop_toBottomOf="@+id/textView112" />
-
-
         <ProgressBar
             android:id="@+id/progressBar3"
             style="?android:attr/progressBarStyleHorizontal"
@@ -201,17 +156,17 @@
             android:background="@color/colorAccent"
             app:layout_constraintEnd_toStartOf="@+id/textView152"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView122" />
+            app:layout_constraintTop_toBottomOf="@+id/textView622" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/textView152"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
             android:layout_marginEnd="24dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/background"
-            android:backgroundTint="#4D4D4D"
+            android:backgroundTint="#008300"
             android:padding="8dp"
             android:clickable="true"
             android:text="JOIN"
@@ -219,8 +174,8 @@
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView922"
-            app:layout_constraintStart_toEndOf="@id/textView132"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView822"
+            app:layout_constraintStart_toEndOf="@id/progressBar3"/>
 
         <TextView
             android:id="@+id/textView162"

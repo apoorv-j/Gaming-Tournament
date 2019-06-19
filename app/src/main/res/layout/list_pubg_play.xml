@@ -2,11 +2,11 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cardView"
+    android:id="@+id/pp_cardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardCornerRadius="8dp">
+    app:cardCornerRadius="8dp" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         style="@style/boldBlackLetter"
@@ -14,27 +14,27 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/image"
+            android:id="@+id/pp_image"
             android:layout_width="0dp"
             android:layout_height="225dp"
-            android:src="@drawable/pubg"
+            android:src="@drawable/pubg1"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/pp_imageView"
             android:layout_width="54dp"
             android:layout_height="54dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             android:src="@drawable/game_logo"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image" />
+            app:layout_constraintTop_toBottomOf="@+id/pp_image" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/pp_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -43,13 +43,13 @@
             android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
             android:textColor="@android:color/darker_gray"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="@id/textView18"
+            app:layout_constraintEnd_toEndOf="@id/pp_textView18"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView" />
+            app:layout_constraintStart_toEndOf="@+id/pp_imageView"
+            app:layout_constraintTop_toTopOf="@+id/pp_imageView" />
 
         <TextView
-            android:id="@+id/textView18"
+            android:id="@+id/pp_textView18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -57,32 +57,32 @@
             android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
             android:textColor="@android:color/darker_gray"
             android:textSize="18sp"
-            app:layout_constraintLeft_toRightOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintLeft_toRightOf="@+id/pp_textView"
+            app:layout_constraintTop_toTopOf="@+id/pp_imageView"
             android:layout_marginLeft="12dp"
 
             />
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/pp_textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Time:"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintStart_toStartOf="@+id/pp_textView"
+            app:layout_constraintTop_toBottomOf="@+id/pp_textView" />
 
         <TextView
-            android:id="@+id/textView19"
+            android:id="@+id/pp_textView19"
             android:layout_width="wrap_content"
             android:layout_height="19dp"
             android:layout_marginTop="8dp"
             android:text="03/03/2019 at 11:30 AM"
             android:layout_marginLeft="12dp"
-            app:layout_constraintLeft_toRightOf="@id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintLeft_toRightOf="@id/pp_textView2"
+            app:layout_constraintTop_toBottomOf="@+id/pp_textView" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/pp_textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="36dp"
@@ -90,148 +90,149 @@
             android:text="WIN PRIZE"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/pp_textView2" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/pp_textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="36dp"
             android:text="ENTRY FEE"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView3" />
+            app:layout_constraintTop_toTopOf="@+id/pp_textView3" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/pp_textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PER KILL"
             android:textSize="12sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView4"
-            app:layout_constraintStart_toEndOf="@+id/textView3"
-            app:layout_constraintTop_toTopOf="@+id/textView3" />
+            app:layout_constraintEnd_toStartOf="@+id/pp_textView4"
+            app:layout_constraintStart_toEndOf="@+id/pp_textView3"
+            app:layout_constraintTop_toTopOf="@+id/pp_textView3" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/pp_textView6"
             style="@style/boldBlackLetter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="₹ 150"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/textView3"
-            app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintEnd_toEndOf="@+id/pp_textView3"
+            app:layout_constraintStart_toStartOf="@+id/pp_textView3"
+            app:layout_constraintTop_toBottomOf="@+id/pp_textView3" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/pp_textView7"
             style="@style/boldBlackLetter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="₹ 10"
-            app:layout_constraintEnd_toEndOf="@+id/textView5"
-            app:layout_constraintStart_toStartOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintEnd_toEndOf="@+id/pp_textView5"
+            app:layout_constraintStart_toStartOf="@+id/pp_textView5"
+            app:layout_constraintTop_toBottomOf="@+id/pp_textView5" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/pp_textView8"
             style="@style/boldBlackLetter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="₹ 20"
-            app:layout_constraintEnd_toEndOf="@+id/textView4"
-            app:layout_constraintStart_toStartOf="@+id/textView4"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            app:layout_constraintEnd_toEndOf="@+id/pp_textView4"
+            app:layout_constraintStart_toStartOf="@+id/pp_textView4"
+            app:layout_constraintTop_toBottomOf="@+id/pp_textView4" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/pp_textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="TYPE"
             android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView3"
-            app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            app:layout_constraintEnd_toEndOf="@+id/pp_textView3"
+            app:layout_constraintStart_toStartOf="@+id/pp_textView3"
+            app:layout_constraintTop_toBottomOf="@+id/pp_textView6" />
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/pp_textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="MAP"
             android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView4"
-            app:layout_constraintStart_toStartOf="@+id/textView4"
-            app:layout_constraintTop_toTopOf="@+id/textView9" />
+            app:layout_constraintEnd_toEndOf="@+id/pp_textView4"
+            app:layout_constraintStart_toStartOf="@+id/pp_textView4"
+            app:layout_constraintTop_toTopOf="@+id/pp_textView9" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/pp_textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="VERSION"
             android:textSize="12sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView10"
-            app:layout_constraintStart_toEndOf="@+id/textView9"
-            app:layout_constraintTop_toTopOf="@+id/textView9" />
+            app:layout_constraintEnd_toStartOf="@+id/pp_textView10"
+            app:layout_constraintStart_toEndOf="@+id/pp_textView9"
+            app:layout_constraintTop_toTopOf="@+id/pp_textView9" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/pp_textView12"
             style="@style/boldBlackLetter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Solo"
-            app:layout_constraintEnd_toEndOf="@+id/textView9"
-            app:layout_constraintStart_toStartOf="@+id/textView9"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            app:layout_constraintEnd_toEndOf="@+id/pp_textView9"
+            app:layout_constraintStart_toStartOf="@+id/pp_textView9"
+            app:layout_constraintTop_toBottomOf="@+id/pp_textView9" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/pp_textView13"
             style="@style/boldBlackLetter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="TPP"
-            app:layout_constraintEnd_toEndOf="@+id/textView11"
-            app:layout_constraintStart_toStartOf="@+id/textView11"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+            app:layout_constraintEnd_toEndOf="@+id/pp_textView11"
+            app:layout_constraintStart_toStartOf="@+id/pp_textView11"
+            app:layout_constraintTop_toBottomOf="@+id/pp_textView11" />
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/pp_textView14"
             style="@style/boldBlackLetter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Erangle"
-            app:layout_constraintEnd_toEndOf="@+id/textView10"
-            app:layout_constraintStart_toStartOf="@+id/textView10"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            android:text="Erangel"
+            app:layout_constraintEnd_toEndOf="@+id/pp_textView10"
+            app:layout_constraintStart_toStartOf="@+id/pp_textView10"
+            app:layout_constraintTop_toBottomOf="@+id/pp_textView10" />
 
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="0dp"
-            android:layout_height="4dp"
+            android:layout_height="6dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="24dp"
             android:background="@color/colorAccent"
-            app:layout_constraintEnd_toStartOf="@+id/textView15"
+            app:layout_constraintEnd_toStartOf="@+id/pp_join"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView15" />
+            app:layout_constraintTop_toTopOf="@+id/pp_join" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/textView15"
+            android:id="@+id/pp_join"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/background"
-            android:backgroundTint="#4D4D4D"
+            android:background="#008300"
+            android:foreground="?attr/selectableItemBackground"
+            android:backgroundTint="#008300"
             android:padding="8dp"
             android:clickable="true"
             android:text="JOIN"
@@ -239,10 +240,10 @@
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+            app:layout_constraintTop_toBottomOf="@+id/pp_textView14" />
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/pp_textView16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -252,7 +253,7 @@
             app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/pp_pos_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -261,6 +262,8 @@
             android:textSize="10sp"
             app:layout_constraintStart_toStartOf="@+id/progressBar"
             app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

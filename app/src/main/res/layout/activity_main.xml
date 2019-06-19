@@ -26,7 +26,22 @@
             android:titleTextColor="@color/white"
             android:title="@string/app_name">
 
+          <TextView
+              android:id="@+id/balaceBox"
+              android:text="₹ 0"
+              android:textSize="14sp"
+              android:textStyle="bold"
+              android:background="@drawable/bg_stroked"
+              android:paddingTop="4dp"
+              android:paddingBottom="4dp"
+              android:paddingEnd="24dp"
+              android:paddingStart="24dp"
+              android:layout_gravity="end"
+              android:layout_marginEnd="16dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
         </android.widget.Toolbar>
+
     </com.google.android.material.appbar.AppBarLayout>
 
 
@@ -37,78 +52,15 @@
        android:layout_marginTop="?android:attr/actionBarSize"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="parent">
+       app:layout_constraintTop_toTopOf="parent"
+       android:padding="10dp">
 
-
-       <com.google.android.material.internal.CheckableImageButton
-           android:id="@+id/pubg_logo"
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/main_recycler_view"
            android:layout_width="match_parent"
-           android:layout_height="120dp"
-           android:cropToPadding="true"
-           android:layout_marginTop="40dp"
-           android:layout_marginLeft="40dp"
-           android:layout_marginRight="40dp"
-           android:src="@drawable/pubg_logo"
-           android:backgroundTint="@color/white"
-           android:onClick="onClick"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toTopOf="parent"
-           android:background="@color/colorPrimary">
+           android:layout_height="match_parent">
 
-       </com.google.android.material.internal.CheckableImageButton>
-
-       <com.google.android.material.internal.CheckableImageButton
-           android:id="@+id/freefire_logo"
-           android:layout_width="match_parent"
-           android:onClick="onClick"
-           android:layout_height="120dp"
-           android:cropToPadding="true"
-           android:layout_marginTop="20dp"
-           android:background="@color/white"
-           android:src="@drawable/freefire_logo"
-           android:layout_marginLeft="40dp"
-           android:layout_marginRight="40dp"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toBottomOf="@id/pubg_logo">
-
-       </com.google.android.material.internal.CheckableImageButton>
-
-       <com.google.android.material.internal.CheckableImageButton
-           android:id="@+id/ludo_logo"
-           android:layout_width="match_parent"
-           android:layout_height="120dp"
-           android:cropToPadding="true"
-           android:layout_marginTop="20dp"
-           android:background="@color/white"
-           android:onClick="onClick"
-           android:src="@drawable/ludok"
-           android:layout_marginLeft="40dp"
-           android:layout_marginRight="40dp"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toBottomOf="@id/freefire_logo">
-
-       </com.google.android.material.internal.CheckableImageButton>
-
-       <com.google.android.material.internal.CheckableImageButton
-           android:id="@+id/minim_logo"
-           android:layout_width="match_parent"
-           android:layout_height="120dp"
-           android:cropToPadding="true"
-           android:onClick="onClick"
-           android:layout_marginTop="20dp"
-           android:background="@color/white"
-           android:src="@drawable/minim"
-           android:layout_marginLeft="40dp"
-           android:layout_marginRight="40dp"
-           android:layout_marginBottom="40dp"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toBottomOf="@id/ludo_logo">
-
-       </com.google.android.material.internal.CheckableImageButton>
+       </androidx.recyclerview.widget.RecyclerView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -118,15 +70,14 @@
         android:id="@+id/side_nav_bar"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginTop="?android:actionBarSize"
-        app:itemTextColor="@color/white"
-        android:background="@color/colorPrimary"
-        app:itemIconTint="@color/white"
+        android:background="@color/gray"
         app:menu="@menu/drawer"
         android:contextClickable="true"
         app:headerLayout="@layout/header"
         android:layout_gravity="start"
-        app:itemHorizontalPadding="30dp"
+        app:itemHorizontalPadding="15dp"
+        app:itemIconTint="#0F7C9C"
+
         >
     </com.google.android.material.navigation.NavigationView>
 

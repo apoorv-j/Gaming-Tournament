@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
 public class Util {
+
     public static void changeFragment(FragmentActivity fragmentActivity, Fragment fragment){
         fragmentActivity.getSupportFragmentManager()
                 .beginTransaction()
@@ -14,6 +15,7 @@ public class Util {
         fragmentActivity.getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.main_constraint, fragment)
+                .addToBackStack(null)
                 .commit();
     }
 }

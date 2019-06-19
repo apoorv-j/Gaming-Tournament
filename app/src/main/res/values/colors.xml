@@ -6,4 +6,7 @@
     <color name="gray">#F3F2F2</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="background">#dddddd</color>
+    <color name="notClickable">#4D4D4D</color>
+
 </resources>

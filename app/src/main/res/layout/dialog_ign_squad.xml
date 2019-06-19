@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:background="#F8F8F8"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:id="@+id/title_ign_dialog_squad"
+        android:text="ENTER PUBG USERNAMES"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="25dp"
+        android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+        android:background="#1976d2"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:elevation="5dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/player1_squad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PLAYER 1"
+            android:elevation="4dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/player2_squad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PLAYER 2"
+            android:elevation="4dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/player3_squad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PLAYER 3"
+            android:elevation="4dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/player4_squad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PLAYER 4"
+            android:elevation="4dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/black"
+        android:text="@string/player_details_rules"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <TextView
+            android:id="@+id/cancel_ign_dialog_squad"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="#939292"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Cancel"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"
+            android:layout_weight="0.5"/>
+
+        <TextView
+            android:id="@+id/next_ign_dialog_squad"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="#008300"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="4dp"
+            android:layout_marginLeft="5dp"
+            android:text="NEXT"
+            android:textColor="@color/white"
+            android:layout_weight="0.5"/>
+    </LinearLayout>
+</LinearLayout>

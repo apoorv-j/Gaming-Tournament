@@ -14,7 +14,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/image1"
+            android:id="@+id/fp_image1"
             android:layout_width="0dp"
             android:layout_height="225dp"
             android:src="@drawable/freefire_logo"
@@ -23,17 +23,17 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/fp_imageView1"
             android:layout_width="54dp"
             android:layout_height="54dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             android:src="@drawable/game_logo"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image1" />
+            app:layout_constraintTop_toBottomOf="@+id/fp_image1" />
 
         <TextView
-            android:id="@+id/textView000"
+            android:id="@+id/fp_textView000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -42,13 +42,13 @@
             android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
             android:textColor="@android:color/darker_gray"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="@id/textView180"
+            app:layout_constraintEnd_toEndOf="@id/fp_textView180"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView1"
-            app:layout_constraintTop_toTopOf="@+id/imageView1" />
+            app:layout_constraintStart_toEndOf="@+id/fp_imageView1"
+            app:layout_constraintTop_toTopOf="@+id/fp_imageView1" />
 
         <TextView
-            android:id="@+id/textView180"
+            android:id="@+id/fp_textView180"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -56,32 +56,32 @@
             android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
             android:textColor="@android:color/darker_gray"
             android:textSize="18sp"
-            app:layout_constraintLeft_toRightOf="@+id/textView000"
-            app:layout_constraintTop_toTopOf="@+id/imageView1"
+            app:layout_constraintLeft_toRightOf="@+id/fp_textView000"
+            app:layout_constraintTop_toTopOf="@+id/fp_imageView1"
             android:layout_marginLeft="12dp"
 
             />
         <TextView
-            android:id="@+id/textView200"
+            android:id="@+id/fp_textView200"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Time:"
-            app:layout_constraintStart_toStartOf="@+id/textView000"
-            app:layout_constraintTop_toBottomOf="@+id/textView000" />
+            app:layout_constraintStart_toStartOf="@+id/fp_textView000"
+            app:layout_constraintTop_toBottomOf="@+id/fp_textView000" />
 
         <TextView
-            android:id="@+id/textView190"
+            android:id="@+id/fp_textView190"
             android:layout_width="wrap_content"
             android:layout_height="19dp"
             android:layout_marginTop="8dp"
             android:text="03/03/2019 at 11:30 AM"
             android:layout_marginLeft="12dp"
-            app:layout_constraintLeft_toRightOf="@id/textView200"
-            app:layout_constraintTop_toBottomOf="@+id/textView000" />
+            app:layout_constraintLeft_toRightOf="@id/fp_textView200"
+            app:layout_constraintTop_toBottomOf="@+id/fp_textView000" />
 
         <TextView
-            android:id="@+id/textView300"
+            android:id="@+id/fp_textView300"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="36dp"
@@ -89,105 +89,105 @@
             android:text="WIN PRIZE"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView200" />
+            app:layout_constraintTop_toBottomOf="@+id/fp_textView200" />
 
         <TextView
-            android:id="@+id/textView400"
+            android:id="@+id/fp_textView400"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="36dp"
             android:text="ENTRY FEE"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView300" />
+            app:layout_constraintTop_toTopOf="@+id/fp_textView300" />
 
         <TextView
-            android:id="@+id/textView500"
+            android:id="@+id/fp_textView500"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PER KILL"
             android:textSize="12sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView400"
-            app:layout_constraintStart_toEndOf="@+id/textView300"
-            app:layout_constraintTop_toTopOf="@+id/textView300" />
+            app:layout_constraintEnd_toStartOf="@+id/fp_textView400"
+            app:layout_constraintStart_toEndOf="@+id/fp_textView300"
+            app:layout_constraintTop_toTopOf="@+id/fp_textView300" />
 
         <TextView
-            android:id="@+id/textView600"
+            android:id="@+id/fp_textView600"
             style="@style/boldBlackLetter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="₹ 100"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/textView300"
-            app:layout_constraintStart_toStartOf="@+id/textView300"
-            app:layout_constraintTop_toBottomOf="@+id/textView300" />
+            app:layout_constraintEnd_toEndOf="@+id/fp_textView300"
+            app:layout_constraintStart_toStartOf="@+id/fp_textView300"
+            app:layout_constraintTop_toBottomOf="@+id/fp_textView300" />
 
         <TextView
-            android:id="@+id/textView700"
+            android:id="@+id/fp_textView700"
             style="@style/boldBlackLetter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="₹ 5"
-            app:layout_constraintEnd_toEndOf="@+id/textView500"
-            app:layout_constraintStart_toStartOf="@+id/textView500"
-            app:layout_constraintTop_toBottomOf="@+id/textView500" />
+            app:layout_constraintEnd_toEndOf="@+id/fp_textView500"
+            app:layout_constraintStart_toStartOf="@+id/fp_textView500"
+            app:layout_constraintTop_toBottomOf="@+id/fp_textView500" />
 
         <TextView
-            android:id="@+id/textView800"
+            android:id="@+id/fp_textView800"
             style="@style/boldBlackLetter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="₹ 10"
-            app:layout_constraintEnd_toEndOf="@+id/textView400"
-            app:layout_constraintStart_toStartOf="@+id/textView400"
-            app:layout_constraintTop_toBottomOf="@+id/textView400" />
+            app:layout_constraintEnd_toEndOf="@+id/fp_textView400"
+            app:layout_constraintStart_toStartOf="@+id/fp_textView400"
+            app:layout_constraintTop_toBottomOf="@+id/fp_textView400" />
 
         <TextView
-            android:id="@+id/textView900"
+            android:id="@+id/fp_textView900"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="TYPE"
             android:textSize="12sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView500"
-            app:layout_constraintStart_toEndOf="@+id/textView300"
-            app:layout_constraintTop_toBottomOf="@+id/textView600" />
+            app:layout_constraintEnd_toStartOf="@+id/fp_textView500"
+            app:layout_constraintStart_toEndOf="@+id/fp_textView300"
+            app:layout_constraintTop_toBottomOf="@+id/fp_textView600" />
 
 
         <TextView
-            android:id="@+id/textView110"
+            android:id="@+id/fp_textView110"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="MAP"
             android:textSize="12sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView400"
-            app:layout_constraintStart_toEndOf="@+id/textView500"
-            app:layout_constraintTop_toTopOf="@+id/textView900" />
+            app:layout_constraintEnd_toStartOf="@+id/fp_textView400"
+            app:layout_constraintStart_toEndOf="@+id/fp_textView500"
+            app:layout_constraintTop_toTopOf="@+id/fp_textView900" />
 
         <TextView
-            android:id="@+id/textView120"
+            android:id="@+id/fp_textView120"
             style="@style/boldBlackLetter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:text="Solo"
-            app:layout_constraintEnd_toEndOf="@+id/textView900"
-            app:layout_constraintStart_toStartOf="@+id/textView900"
-            app:layout_constraintTop_toBottomOf="@+id/textView900" />
+            app:layout_constraintEnd_toEndOf="@+id/fp_textView900"
+            app:layout_constraintStart_toStartOf="@+id/fp_textView900"
+            app:layout_constraintTop_toBottomOf="@+id/fp_textView900" />
 
         <TextView
-            android:id="@+id/textView130"
+            android:id="@+id/fp_textView130"
             style="@style/boldBlackLetter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:text="Bermuda"
-            app:layout_constraintEnd_toEndOf="@+id/textView110"
-            app:layout_constraintStart_toStartOf="@+id/textView110"
-            app:layout_constraintTop_toBottomOf="@+id/textView110" />
+            app:layout_constraintEnd_toEndOf="@+id/fp_textView110"
+            app:layout_constraintStart_toStartOf="@+id/fp_textView110"
+            app:layout_constraintTop_toBottomOf="@+id/fp_textView110" />
 
 
         <ProgressBar
@@ -199,19 +199,20 @@
             android:layout_marginTop="18dp"
             android:layout_marginEnd="24dp"
             android:background="@color/colorAccent"
-            app:layout_constraintEnd_toStartOf="@+id/textView150"
+            app:layout_constraintEnd_toStartOf="@+id/fp_textView150"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView120" />
+            app:layout_constraintTop_toBottomOf="@+id/fp_textView120" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/textView150"
+            android:id="@+id/fp_textView150"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/background"
-            android:backgroundTint="#4D4D4D"
+            android:background="#008300"
+            android:foreground="?attr/selectableItemBackground"
+            android:backgroundTint="#008300"
             android:padding="8dp"
             android:clickable="true"
             android:text="JOIN"
@@ -219,11 +220,11 @@
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView900"
-            app:layout_constraintStart_toEndOf="@id/textView130"/>
+            app:layout_constraintTop_toBottomOf="@+id/fp_textView900"
+            app:layout_constraintStart_toEndOf="@id/fp_textView130"/>
 
         <TextView
-            android:id="@+id/textView160"
+            android:id="@+id/fp_textView160"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -233,7 +234,7 @@
             app:layout_constraintTop_toBottomOf="@+id/progressBar1" />
 
         <TextView
-            android:id="@+id/textView170"
+            android:id="@+id/fp_pos_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -242,6 +243,8 @@
             android:textSize="10sp"
             app:layout_constraintStart_toStartOf="@+id/progressBar1"
             app:layout_constraintTop_toBottomOf="@+id/progressBar1" />
+
+       
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

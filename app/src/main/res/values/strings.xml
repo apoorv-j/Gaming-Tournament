@@ -6,31 +6,118 @@
     <string name="title_me">Me</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="hint_name">Full Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_number">Mobile Number</string>
+    <string name="hint_payer_id">Player ID</string>
+    <string name="next">Next</string>
+    <string name="err_msg_name">Enter your full name</string>
+    <string name="err_msg_email">Enter valid email address</string>
+    <string name="err_msg_phone">Enter valid number</string>
+    <string name="err_msg_payerID">Enter your Player ID</string>
 
+    <string name="rupees">₹</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_earn">Earn</string>
     <string name="title_activity_match_detail">MatchDetailActivity</string>
     <string name="title_activity_result_detail">ResultDetailActivity</string>
+
+    <string name="share_app_text">Do you know you can win Free Paytm Cash by Playing PUBG , LUDO , FREE FIRE and other mobile games? \n\n
+
+Yes, now get paid for playing games and every Kill. Not only this, if you get Chicken Dinner, you really win Big Prizes.\n\n
+
+Just Download &amp; Try Gaming Tournament App: http://gamingtournament.in/download/gamingtournament.apk</string>
+
+    <!--signup-->
+    <string name="usernameReg">Username</string>
+    <string name="emailReg">Email</string>
+    <string name="passwordReg">Password</string>
+    <string name="sign_upReg">Register</string>
+    <string name="sign_inLog">Sign in</string>
+    <string name="signin_redirect">Already a member? Sign in!</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="signup_redirect">Don\'t have an account? Register here!</string>
+
+    <string name="player_details_rules">
+•  Make sure you enter your In-Game username(IGN) and not Character ID.\n
+•  Details of all the Team Members are need to be entered.\n
+•  Players whose details are not entered here will be kicked out of the game. \n
+    </string>
+    <string name="freefireRules">
+•  If in anyway you fail to join the room by the match start time then we aren\'t responsible for it.     Refund in such cases won\'t be processed. So make sure to join on time.\n\n
+•  Do not share the Room ID and Password with anyone who has not joined the match. If you are found doing so, your account may get terminated and all the winnings will be lost.\n\n
+•  Griefing and Teaming is against the game rules. Any participant found doing so will be disqualified and their prizes will be lost.\n\n
+•  Room ID and Password will be shared in the app before 10 minutes of match start time.\n\n
+•  Match will start after 10 minutes of Sharing Room ID and Password.\n\n
+•  Make sure to grab ID and Password before the Match Start Time.\n\n
+•  Make sure you join the Match Room ASAP, before the match starts.\n\n
+•  This match is Paid match. To participate, you have to pay the entry fee amount. Join it before all the spots are filled.\n\n
+•  Please note that the listed entry fee is per individual and not the squad/duo team. \n\n
+•  Each member of a team (Squad or Duo) has to pay the entry fee and register individually for the match or tournament.\n\n
+•  Once you join the match custom room, do not keep changing your position. If you do so, you may get kicked from the room.\n\n
+•  Use only Mobile Device to Join Match. Do not use any Hacks or Emulators.\n\n
+•  You will be also rewarded for each kill. Check the rewards details above.\n\n
+•  Spots are given on the First Come First Basis.\n\n
+•  Last standing man gets the booyah !  Award.\n\n
+•  If anyone found violating these rules then immediate action will be taken and respective accounts may get banned and rewards may be abandoned.\n\n
+•  If you have any queries then contact us on lakshayofficialbusiness114@gmail.com\n\n
+•  Also, if you want to arrange Giveaway or Sponsor any such match then drop us a mail at lakshayofficialbusiness114@gmail.com\n\n
+    </string>
+
+    <string name="minimRules">
+• To play Mini militia Tournaments  , use only Mini militia game (available on playstore) . Do not use any hacks .\n\n
+• if you team up with anyone you will be boot/kicked out from the server .\n\n
+• If you abort the game in between tournament you will be out of the server ,refund in such cases will not be considered. (we recommend you to play tournaments in good network speed )\n\n
+• If in anyway you fail to join the room by the match start time then we are not responsible for it. Refund in such cases won\'t be processed. So make sure to join on time.\n\n
+•  Do not share the Room ID and Password with anyone who has not joined the match. If you are found doing so, your account may get terminated and all the winnings will be lost.\n\n
+•  Griefing and Teaming is against the game rules. Any participant found doing so will be disqualified and their prizes will be lost.\n\n
+•  Room ID and Password will be shared in the app before 2 minutes of match start time.\n\n
+•  Match will start after 2 minutes of Sharing Room ID and Password.\n\n
+•  Make sure to grab ID and Password before the Match Start Time.\n\n
+•  Make sure you join the Match Room ASAP, before the match starts.\n\n
+•  This match is Paid match. To participate, you have to pay the entry fee amount. \n\n
+•  Please note that the listed entry fee is per individual. \n\n
+    </string>
+
+    <string name="ludoRules">
+• Take screenshot of the result after you won the game and send it to 9560537857 Whatsapp to claim your prize money . \n\n
+• If you dont send the screenshot in 10 minutes after game you are not eligible for claiming the prize. Refund in such cases wont be entertained.\n\n
+• Screenshots are only required only for 2 player games.   \n\n
+• To play ludo tournaments , use only ludo king game available on playstore . Do not use any hacks . \n\n
+• There will be 2 players game and 4 players game everyday ,choose your appropriate category . prize money may vary .  \n\n
+• 18 percent tax will be deducted from the amount won by you in case of every 2 player game you won as convenience charge. \n\n
+• You get double of your money if you won in 4 players game . There will be no deduction of tax and convenience Fee . \n\n
+• If you abort the game in between tournament you will be out of the server ,refund in such cases will not be considered. (we recommend you to play tournaments in good network speed ) \n\n
+• If in anyway you fail to join the room by the match start time then we are not responsible for it. Refund in such cases will not be processed. So make sure to join on time. \n\n
+•  Do not share the Room ID and Password with anyone who has not joined the match. If you are found doing so, your account may get terminated and all the winnings will be lost. \n\n
+•  Griefing and Teaming is against the game rules. Any participant found doing so will be disqualified and their prizes will be lost. \n\n
+•  Room ID and Password will be shared in the app before 2 minutes of match start time. \n\n
+•  Match will start after 2 minutes of Sharing Room ID and Password. \n\n
+•  Make sure to grab ID and Password before the Match Start Time. \n\n
+•  Make sure you join the Match Room ASAP, before the match starts. \n\n
+•  This match is Paid match. To participate, you have to pay the entry fee amount. \n\n
+•  Please note that the listed entry fee is per individual.  \n\n
+    </string>
     <string name="pubgRules">
-•  No new PUBG Accouts Allowed. PUBG Accounts with Level less than 20 are not allowed to participate. Such participants will be kicked from the room and they will not be given refund.\n
-•  If in anyway you fail to join the room by the match start time then we aren\'t responsible for it. Refund in such cases won\'t be processed. So make sure to join on time.\n
-•  Do not share the Room ID and Password with anyone who has not joined the match. If you are found doing so, your account may get terminated and all the winnings will be lost. \n
-•  Griefing and Teaming is against the game rules. Any participant found doing so will be disqualified and their prizes will be lost.\n
-•  Room ID and Password will be shared in the app before 10 minutes of match start time.\n
-•  Match will start after 10 minutes of Sharing Room ID and Password.\n
-•  Make sure to grab ID and Password before the Match Start Time.\n
-•  Make sure you join the Match Room ASAP, before the match starts.\n
-•  This match is Paid match. To participate, you have to pay the entry fee amount. Join it before all the spots are filled.\n
-•  Please note that the listed entry fee is per individual and not the squad/duo team. \n
-•  Each member of a team (Squad or Duo) has to pay the entry fee and register individually for the match or tournament.\n
-•  Once you join the match custom room, do not keep changing your position. If you do so, you may get kicked from the room.\n
-•  Use only Mobile Device to Join Match. Do not use any Hacks or Emulators.\n
-•  You will be also rewarded for each kill. Check the rewards details above.\n
-•  Spots are given on the First Come First Basis.\n
-•  Last standing man gets the Chicken Dinner Award.\n
-•  If anyone found violating these rules then immediate action will be taken and respective accounts may get banned and rewards may be abandoned.\n
-•  If you have any queries then contact us on lakshayofficialbusiness114@gmail.com \n
-•  Also, if you want to arrange Giveaway or Sponsor any such match then drop us a mail at lakshayofficialbusiness114@gmail.com</string>
+•  No new PUBG Accouts Allowed. PUBG Accounts with Level less than 20 are not allowed to participate. Such participants will be kicked from the room and they will not be given refund.\n\n
+•  If in anyway you fail to join the room by the match start time then we are not responsible for it. Refund in such cases won\'t be processed. So make sure to join on time.\n\n
+•  Do not share the Room ID and Password with anyone who has not joined the match. If you are found doing so, your account may get terminated and all the winnings will be lost. \n\n
+•  Griefing and Teaming is against the game rules. Any participant found doing so will be disqualified and their prizes will be lost.\n\n
+•  Room ID and Password will be shared in the app before 10 minutes of match start time.\n\n
+•  Match will start after 10 minutes of Sharing Room ID and Password.\n\n
+•  Make sure to grab ID and Password before the Match Start Time.\n\n
+•  Make sure you join the Match Room ASAP, before the match starts.\n\n
+•  This match is Paid match. To participate, you have to pay the entry fee amount. Join it before all the spots are filled.\n\n
+•  Please note that the listed entry fee is per individual and not the squad/duo team. \n\n
+•  Each member of a team (Squad or Duo) has to pay the entry fee and register individually for the match or tournament.\n\n
+•  Once you join the match custom room, do not keep changing your position. If you do so, you may get kicked from the room.\n\n
+•  Use only Mobile Device to Join Match. Do not use any Hacks or Emulators.\n\n
+•  You will be also rewarded for each kill. Check the rewards details above.\n\n
+•  Spots are given on the First Come First Basis.\n\n
+•  Last standing man gets the Chicken Dinner Award.\n\n
+•  If anyone found violating these rules then immediate action will be taken and respective accounts may get banned and rewards may be abandoned.\n\n
+•  If you have any queries then contact us on lakshayofficialbusiness114@gmail.com \n\n
+•  Also, if you want to arrange Giveaway or Sponsor any such match then drop us a mail at lakshayofficialbusiness114@gmail.com\n</string>
 
 
     <string name="aboutus_text">
@@ -38,7 +125,7 @@
 
 Gaming tournaments is an Online Portal which Offers Rewards and Unlimited Entertainment for Participating and Playing Games Online. Currently it supports some Popular and Trending Games i.e., PUBG Mobile, free fire , ludo and mini militia. \n \n
 
-Founded and Launched on 25 april 2019 , was developed by a young mind from Delhi, India! \n \n
+Founded and Launched on 11 JUNE 2019 , was developed by a young mind from Delhi, India! \n \n
 
 You might be addicted to PUBG Mobile , free fire , ludo and mini militia but just think what if you can start making money or living by Playing Mobile Games? Well, this is what Gaming tournaments Offers. Users can participate in the upcoming eSports games and Win Amazing Prizes and Rewards. \n \n
 
@@ -122,8 +209,8 @@ If paid by credit card, refunds will be issued to the original credit card provi
     </string>
 
     <string name="contact_text">Mr.Lakshay arora. (Grievance Officer)
-www.gamingtournaments.com
-Email: lakshayofficialbusiness114@gmail.com</string>
+www.gamingtournament.in
+Email: Gamingbox862@gmail.com</string>
 
     <string name="tnc_text">
 Your website may use the Terms and Conditions given below.

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fr_cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/boldBlackLetter"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/fr_image"
+            android:layout_width="0dp"
+            android:layout_height="225dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/fr_imageView"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/game_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fr_image" />
+
+        <TextView
+            android:id="@+id/fr_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Solo Time - Match #1344"
+            android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/fr_imageView"
+            app:layout_constraintTop_toTopOf="@+id/fr_imageView" />
+
+        <TextView
+            android:id="@+id/fr_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Time: 03/03/2019 at 11:30 AM"
+            app:layout_constraintStart_toStartOf="@+id/fr_textView"
+            app:layout_constraintTop_toBottomOf="@+id/fr_textView" />
+
+        <TextView
+            android:id="@+id/fr_textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="16dp"
+            android:text="WIN PRIZE"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fr_textView2" />
+
+        <TextView
+            android:id="@+id/fr_textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
+            android:text="ENTRY FEE"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fr_textView3" />
+
+        <TextView
+            android:id="@+id/fr_textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PER KILL"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/fr_textView4"
+            app:layout_constraintStart_toEndOf="@+id/fr_textView3"
+            app:layout_constraintTop_toTopOf="@+id/fr_textView3" />
+
+        <TextView
+            android:id="@+id/fr_textView6"
+            style="@style/boldBlackLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="₹ 150"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/fr_textView3"
+            app:layout_constraintStart_toStartOf="@+id/fr_textView3"
+            app:layout_constraintTop_toBottomOf="@+id/fr_textView3" />
+
+        <TextView
+            android:id="@+id/fr_textView7"
+            style="@style/boldBlackLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="₹ 10"
+            app:layout_constraintEnd_toEndOf="@+id/fr_textView5"
+            app:layout_constraintStart_toStartOf="@+id/fr_textView5"
+            app:layout_constraintTop_toBottomOf="@+id/fr_textView5" />
+
+        <TextView
+            android:id="@+id/fr_textView8"
+            style="@style/boldBlackLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="₹ 20"
+            app:layout_constraintEnd_toEndOf="@+id/fr_textView4"
+            app:layout_constraintStart_toStartOf="@+id/fr_textView4"
+            app:layout_constraintTop_toBottomOf="@+id/fr_textView4" />
+
+        <TextView
+            android:id="@+id/fr_textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="TYPE"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/fr_textView3"
+            app:layout_constraintStart_toStartOf="@+id/fr_textView3"
+            app:layout_constraintTop_toBottomOf="@+id/fr_textView6" />
+
+        <TextView
+            android:id="@+id/fr_textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MAP"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/fr_textView4"
+            app:layout_constraintStart_toStartOf="@+id/fr_textView4"
+            app:layout_constraintTop_toTopOf="@+id/fr_textView9" />
+
+        <TextView
+            android:id="@+id/fr_textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VERSION"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/fr_textView10"
+            app:layout_constraintStart_toEndOf="@+id/fr_textView9"
+            app:layout_constraintTop_toTopOf="@+id/fr_textView9" />
+
+        <TextView
+            android:id="@+id/fr_textView12"
+            style="@style/boldBlackLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Solo"
+            app:layout_constraintEnd_toEndOf="@+id/fr_textView9"
+            app:layout_constraintStart_toStartOf="@+id/fr_textView9"
+            app:layout_constraintTop_toBottomOf="@+id/fr_textView9" />
+
+        <TextView
+            android:id="@+id/fr_textView13"
+            style="@style/boldBlackLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TPP"
+            app:layout_constraintEnd_toEndOf="@+id/fr_textView11"
+            app:layout_constraintStart_toStartOf="@+id/fr_textView11"
+            app:layout_constraintTop_toBottomOf="@+id/fr_textView11" />
+
+        <TextView
+            android:id="@+id/fr_textView14"
+            style="@style/boldBlackLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="England"
+            app:layout_constraintEnd_toEndOf="@+id/fr_textView10"
+            app:layout_constraintStart_toStartOf="@+id/fr_textView10"
+            app:layout_constraintTop_toBottomOf="@+id/fr_textView10" />
+
+
+        <TextView
+            android:id="@+id/fr_textView16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#008300"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="WATCH MATCH"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/fr_textView13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fr_textView14" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

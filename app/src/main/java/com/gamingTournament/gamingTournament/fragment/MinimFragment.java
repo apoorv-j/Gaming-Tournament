@@ -48,10 +48,13 @@ public class MinimFragment extends Fragment {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_ongoing:
+
                 case R.id.navigation_play:
                     Util.changeFragment(Objects.requireNonNull(getActivity()), new MinimPlayFragment());
-                    return true;
+                    break;
                 case R.id.navigation_result:
+                    Util.changeFragment(Objects.requireNonNull(getActivity()), new MinimResultFragment());
+                    break;
 
             }
             return true;
