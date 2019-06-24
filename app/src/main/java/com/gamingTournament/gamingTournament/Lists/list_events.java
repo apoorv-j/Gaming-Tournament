@@ -9,6 +9,9 @@ import retrofit2.Response;
 public class list_events {
 
     @Expose
+    @SerializedName("title")
+    private String title;
+    @Expose
     @SerializedName("text_data")
     private String textData;
     @Expose
@@ -29,10 +32,15 @@ public class list_events {
         return status;
     }
 
-    public list_events(String textData, String link, String imageURL) {
+    public list_events(String title, String textData, String link, String imageURL) {
+        this.title = title;
         this.textData = textData;
         this.link = link;
         this.imageURL = imageURL;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     public String getTextData() {

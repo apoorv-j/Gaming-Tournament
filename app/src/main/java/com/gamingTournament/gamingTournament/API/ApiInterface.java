@@ -6,6 +6,8 @@ import com.gamingTournament.gamingTournament.Lists.list_match_results;
 import com.gamingTournament.gamingTournament.Lists.list_participants;
 import com.gamingTournament.gamingTournament.Lists.list_play;
 import com.gamingTournament.gamingTournament.Lists.list_room_details;
+import com.gamingTournament.gamingTournament.Lists.list_top_players;
+import com.gamingTournament.gamingTournament.Lists.list_transactions;
 import com.gamingTournament.gamingTournament.Lists.list_winner;
 
 import java.util.List;
@@ -24,9 +26,6 @@ public interface ApiInterface {
     @GET("pubg/match-kills.php")
     Call<List<list_match_results>> matchResults(@Query("salt") String salt);
 
-    @GET("pubg/match-winners.php")
-    Call<List<list_winner>> matchWinner(@Query("salt") String salt);
-
     @GET("pubg/add-players.php")
     Call<ResponseBody> addPubgPlayers(@Query("salt") String salt,
                                         @Query("uname")String username,
@@ -41,9 +40,6 @@ public interface ApiInterface {
     @GET("freefire/match-kills.php")
     Call<List<list_match_results>> matchResultsFreefire(@Query("salt") String salt);
 
-    @GET("freefire/match-winners.php")
-    Call<List<list_winner>> matchWinnerFreefire(@Query("salt") String salt);
-
     @GET("freefire/add-players.php")
     Call<ResponseBody> addFreefirePlayers(@Query("salt") String salt,
                                       @Query("uname")String username,
@@ -55,9 +51,6 @@ public interface ApiInterface {
     @GET("minimilitia/match-details.php")
     Call<List<list_play>> matchDetailsMinim(@Query("salt") String salt);
 
-    @GET("minimilitia/match-winners.php")
-    Call<List<list_winner>> matchWinnerMinim(@Query("salt") String salt);
-
     @GET("minimilitia/add-players.php")
     Call<ResponseBody> addMinimPlayers(@Query("salt") String salt,
                                       @Query("uname")String username,
@@ -67,9 +60,6 @@ public interface ApiInterface {
     //Ludo
     @GET("ludo/match-details.php")
     Call<List<list_play>> matchDetailsLudo(@Query("salt") String salt);
-
-    @GET("ludo/match-winners.php")
-    Call<List<list_winner>> matchWinnerLudo(@Query("salt") String salt);
 
     @GET("ludo/add-players.php")
     Call<ResponseBody> addLudoPlayers(@Query("salt") String salt,
@@ -88,7 +78,7 @@ public interface ApiInterface {
 
     //User Login
     @GET("user-auth.php")
-    Call<Users> getUser(@Query("uname")String username,
+    Call<List<Users>> getUser(@Query("uname")String username,
                         @Query("upass")String password,
                         @Query("salt")String salt);
 
@@ -105,12 +95,12 @@ public interface ApiInterface {
                                      @Query("value")String value);
 
     //Redeem from wallet
-    @GET("reedem-request.php")
+    @GET("redeem-request.php")
     Call<ResponseBody> redeemBalance(@Query("salt")String salt,
                                      @Query("uname")String username,
                                      @Query("upass")String password,
                                      @Query("uphone")String paytmNumber,
-                                     @Query("reedem_amount")String amount);
+                                     @Query("redeem_amount")String amount);
 
     //Forgot password
     @GET("send-otp.php")
@@ -167,6 +157,15 @@ public interface ApiInterface {
     Call<List<list_participants>> getParticipants(@Query("salt")String salt,
                                                   @Query("match_id")String matchID,
                                                   @Query("game")String game);
+
+    //Top Players List
+    @GET("top-players.php")
+    Call<List<list_top_players>> getTopPlayers(@Query("salt")String salt);
+
+    //Transaction History List
+    @GET("transactions.php")
+    Call<List<list_transactions>> getTransactionHistory(@Query("salt")String salt,
+                                           @Query("uname")String username);
 
 
 }

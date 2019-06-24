@@ -12,9 +12,6 @@ public class list_match_results {
     @SerializedName("uname")
     private String username;
     @Expose
-    @SerializedName("player_pubg_id")
-    private String playerID;
-    @Expose
     @SerializedName("kills")
     private String kills;
     @Expose
@@ -29,14 +26,11 @@ public class list_match_results {
         return status;
     }
 
-    public list_match_results(int matchID, String username, String playerID, String kills) {
+    public list_match_results(int matchID, String username, String kills) {
         this.matchID = matchID;
         this.username = username;
-        this.playerID = playerID;
         this.kills = kills;
     }
-
-
 
     public String getMatchID() {
         return String.valueOf(matchID);
@@ -44,7 +38,7 @@ public class list_match_results {
 
 
     public String getPlayerID() {
-        return playerID;
+        return username;
     }
 
 

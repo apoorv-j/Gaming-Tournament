@@ -22,12 +22,15 @@ import com.gamingTournament.gamingTournament.ViewModels.WinnerViewModel;
 import com.gamingTournament.gamingTournament.activity.ResultDetailActivity;
 import com.squareup.picasso.Picasso;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class LudoResultAdapter extends RecyclerView.Adapter<LudoResultAdapter.MyViewHolder> {
 
     private List<list_play> matchDetails;
-    private List<list_winner> winnerList;
     private Fragment context;
     String URL ="http://gamingtournament.in/appimg/";
 
@@ -47,8 +50,17 @@ public class LudoResultAdapter extends RecyclerView.Adapter<LudoResultAdapter.My
         list_play item = matchDetails.get(position);
         if(Integer.parseInt(item.getEntryStatus())!=1)
         {
-
-            holder.dateTime.setText(item.getDateTime());
+            String dateTime = item.getDateTime();
+            DateFormat f1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); //HH for hour of the day (0 - 23)
+            Date d = null;
+            try {
+                d = f1.parse(dateTime);
+                DateFormat f2 = new SimpleDateFormat("yyyy-MM-dd  hh:mma");
+                dateTime = f2.format(d).toLowerCase(); // "12:18am"
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            holder.dateTime.setText(dateTime);
             holder.winPrize.setText("₹"+item.getWinPrize());
             holder.entryFee.setText("₹ "+item.getEntryFee());
             Picasso.get()

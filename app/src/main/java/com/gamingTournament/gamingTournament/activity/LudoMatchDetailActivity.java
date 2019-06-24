@@ -37,6 +37,10 @@ import com.gamingTournament.gamingTournament.fragment.WalletFragment;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import okhttp3.ResponseBody;
@@ -88,20 +92,30 @@ public class LudoMatchDetailActivity extends AppCompatActivity {
             public void onChanged(List<list_play> list_plays) {
                 matchDetails= list_plays;
                 item = matchDetails.get(position);
-                Call<List<list_room_details>> call = apiInterface.pubgRoom("PB_PUBG",item.getMatchID(),user.getUname());
+                String dateTime1 = item.getDateTime();
+                DateFormat f1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); //HH for hour of the day (0 - 23)
+                Date d = null;
+                try {
+                    d = f1.parse(dateTime1);
+                    DateFormat f2 = new SimpleDateFormat("yyyy-MM-dd  hh:mma");
+                    dateTime1 = f2.format(d).toLowerCase(); // "12:18am"
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                Call<List<list_room_details>> call = apiInterface.ludoRoom("PB_PUBG",item.getMatchID(),user.getUname());
+                final String finalDateTime = dateTime1;
                 call.enqueue(new Callback<List<list_room_details>>() {
                     @Override
                     public void onResponse(Call<List<list_room_details>> call, Response<List<list_room_details>> response) {
                         String roomID =response.body().get(0).getRoomID();
-                        String roomPass =response.body().get(0).getRoomPass();
                         String status=response.body().get(0).getStatus();
                         if(status!=null&&!status.equals("not_registered")) {
-                            roomDialog(item.getDateTime(), roomID, roomPass);
+                            roomDialog(finalDateTime, roomID);
                         }
 
                         else if(roomID!=null&&!roomID.equals(""))
                         {
-                            roomDialog(item.getDateTime(),roomID,roomPass);
+                            roomDialog(finalDateTime,roomID);
                         }
                         else
                         {
@@ -223,17 +237,21 @@ public class LudoMatchDetailActivity extends AppCompatActivity {
 
                                     View ignView = getLayoutInflater().inflate(R.layout.dialog_ign_solo, null);
                                     final EditText player = ignView.findViewById(R.id.ign_edit_dialog_solo);
-                                    TextView next,title;
-
+                                    TextView next,title,cancel;
+                                    cancel = ignView.findViewById(R.id.cancel_ign_dialog_solo);
                                     next = ignView.findViewById(R.id.next_ign_dialog_solo);
                                     title = ignView.findViewById(R.id.title_ign_dialog_solo);
                                     title.setText("ENTER LUDO USERNAMES");
                                     mBuilder.setView(ignView);
                                     mDialog = mBuilder.create();
                                     mDialog.show();
-                                    mDialog.setCanceledOnTouchOutside(false);
-                                    mDialog.setCancelable(false);
 
+                                    cancel.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            mDialog.dismiss();
+                                        }
+                                    });
                                     next.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
@@ -319,7 +337,7 @@ public class LudoMatchDetailActivity extends AppCompatActivity {
 
     }
 
-    private void roomDialog(final String dateTime, final String ID, final String pass) {
+    private void roomDialog(final String dateTime, final String ID) {
 
         View roomView = getLayoutInflater().inflate(R.layout.dialog_room_details, null);
         final TextView roomID, play, share;

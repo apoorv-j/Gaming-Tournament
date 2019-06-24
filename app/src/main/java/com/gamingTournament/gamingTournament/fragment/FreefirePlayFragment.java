@@ -158,8 +158,7 @@ public class FreefirePlayFragment extends Fragment implements FreefirePlayAdapte
                                 mBuilder.setView(ignView);
                                 mDialog = mBuilder.create();
                                 mDialog.show();
-                                mDialog.setCanceledOnTouchOutside(false);
-                                mDialog.setCancelable(false);
+
 
                                 next.setOnClickListener(new View.OnClickListener() {
                                     @Override
@@ -183,8 +182,7 @@ public class FreefirePlayFragment extends Fragment implements FreefirePlayAdapte
                                 mBuilder.setView(ignView2);
                                 mDialog = mBuilder.create();
                                 mDialog.show();
-                                mDialog.setCanceledOnTouchOutside(false);
-                                mDialog.setCancelable(false);
+
 
                                 next2.setOnClickListener(new View.OnClickListener() {
                                     @Override
@@ -213,8 +211,7 @@ public class FreefirePlayFragment extends Fragment implements FreefirePlayAdapte
                                 mBuilder.setView(ignView3);
                                 mDialog = mBuilder.create();
                                 mDialog.show();
-                                mDialog.setCanceledOnTouchOutside(false);
-                                mDialog.setCancelable(false);
+
 
                                 TextView next3,title3;
                                 next3 = ignView3.findViewById(R.id.next_ign_dialog_squad);

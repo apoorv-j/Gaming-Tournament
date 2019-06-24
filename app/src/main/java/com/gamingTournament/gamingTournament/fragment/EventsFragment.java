@@ -48,7 +48,7 @@ public class EventsFragment extends Fragment implements EventAdapter.OnItemClick
             public void onChanged(List<list_events> list_events) {
                 eventsList=list_events;
                 String status=eventsList.get(0).getStatus();
-                if(!status.equals("no_events_found")) {
+                if(status==null) {
                     eventAdapter=new EventAdapter(eventsList,EventsFragment.this);
                     recyclerView.setAdapter(eventAdapter);
                 }

@@ -20,7 +20,7 @@ import com.gamingTournament.gamingTournament.R;
 import com.gamingTournament.gamingTournament.SharedPrefManager;
 import com.gamingTournament.gamingTournament.Util;
 import com.gamingTournament.gamingTournament.fragment.AboutUsFragment;
-import com.gamingTournament.gamingTournament.fragment.ComingSoonFragment;
+import com.gamingTournament.gamingTournament.fragment.TopPlayersFragment;
 import com.gamingTournament.gamingTournament.fragment.ContactUsFragment;
 import com.gamingTournament.gamingTournament.fragment.EventsFragment;
 import com.gamingTournament.gamingTournament.fragment.FreefireFragment;
@@ -241,7 +241,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                     drawer.closeDrawer(Gravity.LEFT);
                     break;
 
-                case R.id.top_players:Util.changeDrawerFragment(MainActivity.this, new ComingSoonFragment());
+                case R.id.top_players:Util.changeDrawerFragment(MainActivity.this, new TopPlayersFragment());
                                        drawer.closeDrawer(Gravity.LEFT);
                                         break;
 
@@ -274,6 +274,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         {
             case 0: Util.changeDrawerFragment(MainActivity.this, new PubgFragment());
                 break;
+
             case 1: Util.changeDrawerFragment(MainActivity.this, new FreefireFragment());
                 break;
 

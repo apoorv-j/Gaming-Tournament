@@ -21,6 +21,10 @@ import com.gamingTournament.gamingTournament.ViewModels.PlayViewModel;
 import com.gamingTournament.gamingTournament.ViewModels.PubgResultViewModel;
 import com.gamingTournament.gamingTournament.ViewModels.WinnerViewModel;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import androidx.fragment.app.FragmentActivity;
@@ -69,6 +73,17 @@ public class ResultDetailActivity extends FragmentActivity {
             public void onChanged(List<list_play> list_plays) {
                 matchDetails = list_plays;
                 list_play item = matchDetails.get(position);
+
+                String dateTime1 = item.getDateTime();
+                DateFormat f1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); //HH for hour of the day (0 - 23)
+                Date d = null;
+                try {
+                    d = f1.parse(dateTime1);
+                    DateFormat f2 = new SimpleDateFormat("yyyy-MM-dd  hh:mma");
+                    dateTime1 = f2.format(d).toLowerCase(); // "12:18am"
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
 
                 killPrize = findViewById(R.id.ww_textView7);
                 winPrize = findViewById(R.id.ww_textView6);
@@ -133,17 +148,6 @@ public class ResultDetailActivity extends FragmentActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void youtubeClick() {
-        Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + youtubeID));
-        Intent webIntent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("http://www.youtube.com/watch?v=" + youtubeID));
-        try {
-            startActivity(appIntent);
-        } catch (ActivityNotFoundException ex) {
-            startActivity(webIntent);
-        }
     }
 }
 

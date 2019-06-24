@@ -29,6 +29,10 @@ import com.gamingTournament.gamingTournament.ViewModels.FreefireResultViewModel;
 import com.gamingTournament.gamingTournament.ViewModels.PubgResultViewModel;
 import com.gamingTournament.gamingTournament.ViewModels.WinnerViewModel;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class FreefireResultDetailActivity extends FragmentActivity {
@@ -76,9 +80,19 @@ public class FreefireResultDetailActivity extends FragmentActivity {
                 entryFee = findViewById(R.id.ww_textView8);
                 matchTitle = findViewById(R.id.r_match_title);
                 dateTime = findViewById(R.id.r_match_date);
+                String dateTime1 = item.getDateTime();
+                DateFormat f1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); //HH for hour of the day (0 - 23)
+                Date d = null;
+                try {
+                    d = f1.parse(dateTime1);
+                    DateFormat f2 = new SimpleDateFormat("yyyy-MM-dd  hh:mma");
+                    dateTime1 = f2.format(d).toLowerCase(); // "12:18am"
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
 
                 matchTitle.setText(item.getMatchTitle() + "- Match#" + item.getMatchID());
-                dateTime.setText("Organised on " + item.getDateTime());
+                dateTime.setText("Organised on " + dateTime1);
                 winPrize.setText("₹"+ item.getWinPrize());
                 killPrize.setText("₹" + item.getKillPrize());
                 entryFee.setText("₹" + item.getEntryFee());
@@ -110,17 +124,5 @@ public class FreefireResultDetailActivity extends FragmentActivity {
             }
         });
 
-    }
-
-
-    public void youtubeClick() {
-        Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + youtubeID));
-        Intent webIntent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("http://www.youtube.com/watch?v=" + youtubeID));
-        try {
-            startActivity(appIntent);
-        } catch (ActivityNotFoundException ex) {
-            startActivity(webIntent);
-        }
     }
 }

@@ -12,14 +12,5 @@
         android:layout_marginBottom="?android:actionBarSize">
 
     </androidx.recyclerview.widget.RecyclerView>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/noOngoingMatch"
-        android:text="No Ongoing Matches!"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
-        android:background="@color/colorPrimaryDark"
-        android:gravity="center"
-        android:visibility="visible"/>
 
 </FrameLayout>

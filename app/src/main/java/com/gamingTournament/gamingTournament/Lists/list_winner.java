@@ -9,9 +9,6 @@ public class list_winner {
     @SerializedName("winner_uname")
     private String winner_uname;
     @Expose
-    @SerializedName("winner_game_id")
-    private String winnerName;
-    @Expose
     @SerializedName("status")
     private String status;
 
@@ -23,20 +20,12 @@ public class list_winner {
         return status;
     }
 
-    public list_winner( String winner_uname, String winnerName) {
+    public list_winner( String winner_uname, String placeholder) {
         this.winner_uname = winner_uname;
-        this.winnerName = winnerName;
     }
-
-    public String getWinner_uname() {
-        return winner_uname;
-    }
-
 
     public String getWinnerName() {
-        return winnerName;
+        return winner_uname;
     }
-
-
 
 }

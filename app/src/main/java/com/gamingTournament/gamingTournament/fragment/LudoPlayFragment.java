@@ -144,17 +144,21 @@ public class LudoPlayFragment extends Fragment implements LudoPlayAdapter.OnItem
 
                                 View ignView = getLayoutInflater().inflate(R.layout.dialog_ign_solo, null);
                                 final EditText player = ignView.findViewById(R.id.ign_edit_dialog_solo);
-                                TextView next,title;
+                    TextView next,title,cancel;
+                    cancel = ignView.findViewById(R.id.cancel_ign_dialog_solo);
+                    next = ignView.findViewById(R.id.next_ign_dialog_solo);
+                    title = ignView.findViewById(R.id.title_ign_dialog_solo);
+                    title.setText("ENTER LUDO USERNAMES");
+                    mBuilder.setView(ignView);
+                    mDialog = mBuilder.create();
+                    mDialog.show();
 
-                                next = ignView.findViewById(R.id.next_ign_dialog_solo);
-                                title = ignView.findViewById(R.id.title_ign_dialog_solo);
-                                title.setText("ENTER LUDO USERNAMES");
-                                mBuilder.setView(ignView);
-                                mDialog = mBuilder.create();
-                                mDialog.show();
-                                mDialog.setCanceledOnTouchOutside(false);
-                                mDialog.setCancelable(false);
-
+                    cancel.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            mDialog.dismiss();
+                        }
+                    });
                                 next.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {

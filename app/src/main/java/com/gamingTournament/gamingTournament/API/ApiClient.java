@@ -9,7 +9,7 @@ import static android.content.ContentValues.TAG;
 
 public class ApiClient {
 
-    private static  final String BASE_URL = "http://db.purplebytesolutions.com/";
+    private static  final String BASE_URL = "http://db.gamingtournament.in/";
     private static Retrofit retrofit;
 
     public static Retrofit getApiClient() {

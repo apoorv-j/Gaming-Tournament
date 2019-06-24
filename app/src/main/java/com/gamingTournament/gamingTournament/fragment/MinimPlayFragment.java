@@ -151,8 +151,7 @@ public class MinimPlayFragment extends Fragment implements MinimPlayAdapter.OnIt
                                     mBuilder.setView(ignView);
                                     mDialog = mBuilder.create();
                                     mDialog.show();
-                                    mDialog.setCanceledOnTouchOutside(false);
-                                    mDialog.setCancelable(false);
+
 
                                     next.setOnClickListener(new View.OnClickListener() {
                                         @Override

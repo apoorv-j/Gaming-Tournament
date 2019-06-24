@@ -39,13 +39,15 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
             list_events item = eventsList.get(position);
+            holder.title.setText(item.getTitle());
             holder.subtext.setText(item.getTextData());
             Picasso.get()
-                .load("http://"+item.getImageURL())
+                .load(item.getImageURL())
                 .resize(160, 160)
                 .centerCrop()
+                .placeholder(R.drawable.game_logo)
                 .into(holder.imageView);
-            String link = "<a href='http://"+item.getLink()+"'> Click Here</a>";
+            String link = "<a href='"+item.getLink()+"'> Click Here</a>";
             holder.button.setClickable(true);
             holder.button.setMovementMethod(LinkMovementMethod.getInstance());
         if (Build.VERSION.SDK_INT >= 24) {

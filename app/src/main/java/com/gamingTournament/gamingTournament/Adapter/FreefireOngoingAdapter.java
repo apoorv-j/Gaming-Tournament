@@ -1,5 +1,6 @@
 package com.gamingTournament.gamingTournament.Adapter;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import com.gamingTournament.gamingTournament.Lists.list_play;
 import com.gamingTournament.gamingTournament.R;
 import com.squareup.picasso.Picasso;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -42,19 +44,23 @@ public class FreefireOngoingAdapter extends RecyclerView.Adapter<FreefireOngoing
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat mdformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String currDate = mdformat.format(calendar.getTime());
-        String freefireMatchDate = item.getDateTime();
+        String dateTime = item.getDateTime();
 
         try {
             Date cDate= mdformat.parse(currDate);
-            Date mDate= mdformat.parse(freefireMatchDate);
-            if(cDate.before(mDate) && Integer.parseInt(item.getEntryStatus())==1)
-            {
+            Date mDate= mdformat.parse(dateTime);
+            if(cDate.after(mDate) && Integer.parseInt(item.getEntryStatus())==1)
+            {   Log.e( "onBindViewHolder: ","in" );
                 Picasso.get()
                         .load(URL+"freefire.jpg")
                         .fit()
                         .into(holder.imageView);
+
+                DateFormat f2 = new SimpleDateFormat("yyyy-MM-dd  hh:mma");
+                dateTime = f2.format(mDate).toLowerCase(); // "12:18am"
+
                 holder.matchID.setText(item.getMatchTitle());
-                holder.dateTime.setText(item.getDateTime());
+                holder.dateTime.setText(dateTime);
                 holder.winPrize.setText("₹"+item.getWinPrize());
                 holder.killPrize.setText("₹ "+item.getKillPrize());
                 holder.entryFee.setText("₹ "+item.getEntryFee());
@@ -87,7 +93,7 @@ public class FreefireOngoingAdapter extends RecyclerView.Adapter<FreefireOngoing
                 });
             }
             else
-            {
+            {   Log.e( "onBindViewHolder: ","out" );
                 holder.itemView.setVisibility(View.GONE);
                 holder.itemView.setLayoutParams(new RecyclerView.LayoutParams(0, 0));
             }
@@ -109,15 +115,15 @@ public class FreefireOngoingAdapter extends RecyclerView.Adapter<FreefireOngoing
 
         MyViewHolder(View view) {
             super(view);
-            imageView = view.findViewById(R.id.fp_image1);
-            killPrize = view.findViewById(R.id.fp_textView700);
-            winPrize = view.findViewById(R.id.fp_textView600);
-            entryFee = view.findViewById(R.id.fp_textView800);
-            type = view.findViewById(R.id.fp_textView120);
-            map = view.findViewById(R.id.fp_textView130);
-            matchID = view.findViewById(R.id.fp_textView180);
-            dateTime = view.findViewById(R.id.fp_textView190);
-            spectate = view.findViewById(R.id.po_textView15);
+            imageView = view.findViewById(R.id.fo_image1);
+            killPrize = view.findViewById(R.id.fo_textView700);
+            winPrize = view.findViewById(R.id.fo_textView600);
+            entryFee = view.findViewById(R.id.fo_textView800);
+            type = view.findViewById(R.id.fo_textView120);
+            map = view.findViewById(R.id.fo_textView130);
+            matchID = view.findViewById(R.id.fo_textView180);
+            dateTime = view.findViewById(R.id.fo_textView190);
+            spectate = view.findViewById(R.id.fo_textView15);
         }
     }
 

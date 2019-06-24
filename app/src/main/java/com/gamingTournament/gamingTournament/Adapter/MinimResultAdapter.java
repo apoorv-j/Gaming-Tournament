@@ -22,6 +22,10 @@ import com.gamingTournament.gamingTournament.R;
 import com.gamingTournament.gamingTournament.ViewModels.WinnerViewModel;
 import com.squareup.picasso.Picasso;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class MinimResultAdapter extends RecyclerView.Adapter<MinimResultAdapter.MyViewHolder>{
@@ -53,8 +57,18 @@ public class MinimResultAdapter extends RecyclerView.Adapter<MinimResultAdapter.
                     .load(URL+"minim.jpg")
                     .fit()
                     .into(holder.imageView);
+            String dateTime = item.getDateTime();
+            DateFormat f1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); //HH for hour of the day (0 - 23)
+            Date d = null;
+            try {
+                d = f1.parse(dateTime);
+                DateFormat f2 = new SimpleDateFormat("yyyy-MM-dd  hh:mma");
+                dateTime = f2.format(d).toLowerCase(); // "12:18am"
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
             holder.matchTitle.setText(item.getMatchTitle()+"-Match#");
-            holder.dateTime.setText(item.getDateTime());
+            holder.dateTime.setText(dateTime);
             holder.winPrize.setText("₹"+item.getWinPrize());
             holder.entryFee.setText("₹ "+item.getEntryFee());
             holder.playerJoned.setText(item.getPlayerJoined());

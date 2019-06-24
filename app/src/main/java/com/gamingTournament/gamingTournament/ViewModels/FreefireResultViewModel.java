@@ -42,7 +42,7 @@ public class FreefireResultViewModel extends ViewModel {
     private void loadDetails() {
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<List<list_match_results>> call = apiInterface.matchResults("PB_PUBG");
+        Call<List<list_match_results>> call = apiInterface.matchResultsFreefire("PB_PUBG");
         call.enqueue(new Callback<List<list_match_results>>() {
             @Override
             public void onResponse(@NonNull Call<List<list_match_results>> call, @NonNull Response<List<list_match_results>> response) {

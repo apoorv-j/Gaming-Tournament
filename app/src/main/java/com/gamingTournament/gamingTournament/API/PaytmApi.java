@@ -12,7 +12,7 @@ import retrofit2.http.Query;
 
 public interface PaytmApi {
 
-    String BASE_URL = "http://pubg.purplebytesolutions.com/paytm/";
+    String BASE_URL = "http://db.gamingtournament.in/paytm/";
 
     @FormUrlEncoded
     @POST("generateChecksum.php")

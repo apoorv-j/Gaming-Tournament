@@ -9,6 +9,10 @@ import android.widget.TextView;
 import com.gamingTournament.gamingTournament.Lists.list_play;
 import com.gamingTournament.gamingTournament.R;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -37,8 +41,19 @@ public class PubgResultAdapter extends RecyclerView.Adapter<PubgResultAdapter.My
 
         if(Integer.parseInt(item.getEntryStatus())!=1)
         {
+            String dateTime = item.getDateTime();
+            DateFormat f1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); //HH for hour of the day (0 - 23)
+            Date d = null;
+            try {
+                d = f1.parse(dateTime);
+                DateFormat f2 = new SimpleDateFormat("yyyy-MM-dd  hh:mma");
+                dateTime = f2.format(d).toLowerCase(); // "12:18am"
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
             holder.matchID.setText(item.getMatchTitle());
-            holder.dateTime.setText(item.getDateTime());
+            holder.dateTime.setText(dateTime);
             holder.winPrize.setText("₹"+item.getWinPrize());
             holder.killPrize.setText("₹ "+item.getKillPrize());
             holder.entryFee.setText("₹ "+item.getEntryFee());

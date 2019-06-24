@@ -29,6 +29,10 @@ import com.gamingTournament.gamingTournament.ViewModels.PubgResultViewModel;
 import com.gamingTournament.gamingTournament.fragment.WalletFragment;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import androidx.fragment.app.FragmentActivity;
@@ -83,7 +87,18 @@ public class PubgMatchDetailActivity extends FragmentActivity {
             public void onChanged(List<list_play> list_plays) {
                 matchDetails= list_plays;
                 item = matchDetails.get(position);
+                String dateTime1 = item.getDateTime();
+                DateFormat f1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); //HH for hour of the day (0 - 23)
+                Date d = null;
+                try {
+                    d = f1.parse(dateTime1);
+                    DateFormat f2 = new SimpleDateFormat("yyyy-MM-dd  hh:mma");
+                    dateTime1 = f2.format(d).toLowerCase(); // "12:18am"
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
                 Call<List<list_room_details>> call = apiInterface.pubgRoom("PB_PUBG",item.getMatchID(),user.getUname());
+                final String finalDateTime = dateTime1;
                 call.enqueue(new Callback<List<list_room_details>>() {
                     @Override
                     public void onResponse(Call<List<list_room_details>> call, Response<List<list_room_details>> response) {
@@ -91,12 +106,12 @@ public class PubgMatchDetailActivity extends FragmentActivity {
                         String roomPass =response.body().get(0).getRoomPass();
                         String status=response.body().get(0).getStatus();
                         if(status!=null&&!status.equals("not_registered")) {
-                            roomDialog(item.getDateTime(), roomID, roomPass);
+                            roomDialog(finalDateTime, roomID, roomPass);
                         }
 
                         else if(roomID!=null&&!roomID.equals(""))
                         {
-                            roomDialog(item.getDateTime(),roomID,roomPass);
+                            roomDialog(finalDateTime,roomID,roomPass);
                         }
                         else
                         {

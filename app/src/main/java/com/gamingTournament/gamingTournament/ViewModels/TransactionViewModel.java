@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModel;
 
 import com.gamingTournament.gamingTournament.API.ApiClient;
 import com.gamingTournament.gamingTournament.API.ApiInterface;
-import com.gamingTournament.gamingTournament.Lists.list_events;
+import com.gamingTournament.gamingTournament.Lists.list_transactions;
 
 import java.util.List;
 
@@ -17,45 +17,46 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class EventsViewModel extends ViewModel {
+public class TransactionViewModel extends ViewModel {
     private String salt= "PB_PUBG";
     //this is the data that will fetch asynchronously
-    private MutableLiveData<List<list_events>> eventList;
+    private MutableLiveData<List<list_transactions>> transactionList;
 
     ProgressDialog progressDialog;
 
-    public LiveData<List<list_events>> getEvents(Context context){
+    public LiveData<List<list_transactions>> getTransactions(Context context, String uname){
 
         progressDialog = new ProgressDialog(context);
-        progressDialog.setMessage("Its loading....");
+        progressDialog.setMessage("Just a sec....");
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 
-        if(eventList==null)
+        if(transactionList==null)
         {
-            eventList = new MutableLiveData<>();
-            loadEvents();
+            transactionList = new MutableLiveData<>();
+            loadEvents(uname);
         }
-        return eventList;
+        return transactionList;
     }
 
-    private void loadEvents() {
+    private void loadEvents(String uname) {
 
         progressDialog.show();
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<List<list_events>> call = apiInterface.getEvent(salt);
-        call.enqueue(new Callback<List<list_events>>() {
+        Call<List<list_transactions>> call = apiInterface.getTransactionHistory(salt,uname);
+        call.enqueue(new Callback<List<list_transactions>>() {
             @Override
-            public void onResponse(Call<List<list_events>> call, Response<List<list_events>> response) {
-                eventList.setValue(response.body());
+            public void onResponse(Call<List<list_transactions>> call, Response<List<list_transactions>> response) {
+                transactionList.setValue(response.body());
                 progressDialog.dismiss();
             }
 
             @Override
-            public void onFailure(Call<List<list_events>> call, Throwable t) {
+            public void onFailure(Call<List<list_transactions>> call, Throwable t) {
 
             }
         });
 
     }
 }
+

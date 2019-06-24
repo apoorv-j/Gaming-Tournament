@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.gamingTournament.gamingTournament.Lists.list_play;
 import com.gamingTournament.gamingTournament.R;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -41,15 +42,18 @@ public class PubgOngoingAdapter extends RecyclerView.Adapter<PubgOngoingAdapter.
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat mdformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String currDate = mdformat.format(calendar.getTime());
-        String matchDate = item.getDateTime();
+        String dateTime = item.getDateTime();
 
         try {
             Date cDate= mdformat.parse(currDate);
-            Date mDate= mdformat.parse(matchDate);
-            if(cDate.before(mDate) && Integer.parseInt(item.getEntryStatus())==1)
+            Date mDate= mdformat.parse(dateTime);
+            if(cDate.after(mDate) && Integer.parseInt(item.getEntryStatus())==1)
             {
+                DateFormat f2 = new SimpleDateFormat("yyyy-MM-dd  hh:mma");
+                dateTime = f2.format(mDate).toLowerCase(); // "12:18am"
+
                 holder.matchID.setText(item.getMatchTitle());
-                holder.dateTime.setText(item.getDateTime());
+                holder.dateTime.setText(dateTime);
                 holder.winPrize.setText("₹"+item.getWinPrize());
                 holder.killPrize.setText("₹ "+item.getKillPrize());
                 holder.entryFee.setText("₹ "+item.getEntryFee());

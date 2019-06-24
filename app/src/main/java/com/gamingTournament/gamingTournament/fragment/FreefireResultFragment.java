@@ -79,9 +79,10 @@ public class FreefireResultFragment extends Fragment implements FreefireResultAd
 
     @Override
     public void spectateListener(int position, String youtubeID) {
-        Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + youtubeID));
+        String ID = youtubeID.substring(youtubeID.indexOf("=")+1);
+        Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + ID));
         Intent webIntent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("http://www.youtube.com/watch?v=" + youtubeID));
+                Uri.parse("http://www.youtube.com/watch?v=" + ID));
         try {
             startActivity(appIntent);
         } catch (ActivityNotFoundException ex) {
