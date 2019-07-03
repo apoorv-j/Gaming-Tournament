@@ -52,7 +52,7 @@ public class PubgOngoingAdapter extends RecyclerView.Adapter<PubgOngoingAdapter.
                 DateFormat f2 = new SimpleDateFormat("yyyy-MM-dd  hh:mma");
                 dateTime = f2.format(mDate).toLowerCase(); // "12:18am"
 
-                holder.matchID.setText(item.getMatchTitle());
+                holder.matchID.setText(item.getMatchTitle()+" - Match#"+item.getMatchID());
                 holder.dateTime.setText(dateTime);
                 holder.winPrize.setText("₹"+item.getWinPrize());
                 holder.killPrize.setText("₹ "+item.getKillPrize());

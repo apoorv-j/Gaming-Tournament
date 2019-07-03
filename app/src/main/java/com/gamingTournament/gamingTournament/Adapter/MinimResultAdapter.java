@@ -67,7 +67,7 @@ public class MinimResultAdapter extends RecyclerView.Adapter<MinimResultAdapter.
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            holder.matchTitle.setText(item.getMatchTitle()+"-Match#");
+            holder.matchTitle.setText(item.getMatchTitle()+"-Match#"+item.getMatchID());
             holder.dateTime.setText(dateTime);
             holder.winPrize.setText("₹"+item.getWinPrize());
             holder.entryFee.setText("₹ "+item.getEntryFee());

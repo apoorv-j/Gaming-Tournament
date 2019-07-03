@@ -60,6 +60,7 @@ public class LudoResultAdapter extends RecyclerView.Adapter<LudoResultAdapter.My
             } catch (ParseException e) {
                 e.printStackTrace();
             }
+            holder.matchTitle.setText(item.getMatchTitle()+" - "+item.getMatchID());
             holder.dateTime.setText(dateTime);
             holder.winPrize.setText("₹"+item.getWinPrize());
             holder.entryFee.setText("₹ "+item.getEntryFee());

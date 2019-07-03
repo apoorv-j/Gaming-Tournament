@@ -60,7 +60,7 @@ public class MinimPlayAdapter extends RecyclerView.Adapter<MinimPlayAdapter.MyVi
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            holder.matchID.setText(item.getMatchID());
+            holder.matchID.setText(" - Match#"+item.getMatchID());
             holder.map.setText(item.getMap());
             holder.matchTitle.setText(item.getMatchTitle());
             holder.dateTime.setText(dateTime);

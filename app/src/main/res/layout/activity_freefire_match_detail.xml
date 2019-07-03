@@ -28,7 +28,7 @@
                 android:layout_marginStart="16dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
-                android:text="Version: TPP"
+                android:text="Version:"
                 android:textColor="#424242"
                 app:layout_constraintStart_toEndOf="@+id/fd_textView19"
                 app:layout_constraintTop_toTopOf="@+id/fd_textView19" />
@@ -40,7 +40,7 @@
                 android:layout_marginStart="16dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
-                android:text="Map: England"
+                android:text="Map:"
                 android:textColor="#424242"
                 app:layout_constraintStart_toEndOf="@+id/fd_textView20"
                 app:layout_constraintTop_toTopOf="@+id/fd_textView19" />
@@ -52,7 +52,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
-                android:text="Match Type: Paid"
+                android:text="Match Type:"
                 android:textColor="#424242"
                 app:layout_constraintStart_toStartOf="@+id/fd_textView19"
                 app:layout_constraintTop_toBottomOf="@+id/fd_textView19" />
@@ -65,7 +65,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
-                android:text="Entry Fee: $ 30"
+                android:text="Entry Fee:"
                 android:textColor="#424242"
                 app:layout_constraintStart_toEndOf="@+id/fd_textView22"
                 app:layout_constraintTop_toBottomOf="@+id/fd_textView19" />
@@ -77,7 +77,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
-                android:text="Match Shedule: 03/03/2019 at 01:00PM"
+                android:text="Match Shedule:"
                 android:textColor="#424242"
                 app:layout_constraintStart_toStartOf="@+id/fd_textView19"
                 app:layout_constraintTop_toBottomOf="@+id/fd_textView22" />
@@ -89,7 +89,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
-                android:text="Winning prize : $300"
+                android:text="Winning prize :"
                 android:textColor="#424242"
                 app:layout_constraintStart_toStartOf="@+id/fd_textView24"
                 app:layout_constraintTop_toBottomOf="@+id/fd_textView24" />
@@ -101,7 +101,7 @@
                 android:layout_marginStart="16dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
-                android:text="Per Kill : $25"
+                android:text="Per Kill :"
                 android:textColor="#424242"
                 app:layout_constraintStart_toEndOf="@+id/fd_textView26"
                 app:layout_constraintTop_toTopOf="@+id/fd_textView26" />
@@ -122,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:text="Soloo Time - Mtach #1344"
+                android:text="Title"
                 android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
                 android:textColor="#12AC9C"
                 app:layout_constraintStart_toStartOf="parent"
@@ -172,7 +172,7 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
-                android:text="Type: Duo"
+                android:text="Type: "
                 android:textColor="#424242"
                 app:layout_constraintStart_toStartOf="@+id/fd_textView18"
                 app:layout_constraintTop_toBottomOf="@+id/fd_textView18" />

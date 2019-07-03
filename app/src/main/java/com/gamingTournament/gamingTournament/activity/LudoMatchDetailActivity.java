@@ -131,7 +131,7 @@ public class LudoMatchDetailActivity extends AppCompatActivity {
                                     .load(URL+"ludo.jpg")
                                     .fit()
                                     .into(imageView);
-                matchTitle.setText(item.getMatchTitle()+" - "+item.getMatchID());
+                matchTitle.setText(item.getMatchTitle()+"- Match#"+item.getMatchID());
                 dateTime.setText("Match Schedule "+item.getDateTime());
                 winPrize.setText("Winning Price: ₹"+item.getWinPrize());
                 entryFee.setText("Entry Fee: ₹ "+item.getEntryFee());

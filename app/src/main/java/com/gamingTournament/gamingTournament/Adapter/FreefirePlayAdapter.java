@@ -67,7 +67,7 @@ public class FreefirePlayAdapter extends RecyclerView.Adapter<FreefirePlayAdapte
                     .load(URL+"freefire.jpg")
                     .fit()
                     .into(holder.imageView);
-            holder.matchID.setText(item.getMatchID());
+            holder.matchID.setText("- Match#"+item.getMatchID());
             holder.matchTitle.setText(item.getMatchTitle());
             holder.dateTime.setText(dateTime);
             holder.winPrize.setText("₹" + item.getWinPrize());

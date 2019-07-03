@@ -30,7 +30,7 @@
                 android:layout_marginStart="16dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
-                android:text="Version: TPP"
+                android:text="Version:"
                 android:textColor="#424242"
                 app:layout_constraintStart_toEndOf="@+id/textView19"
                 app:layout_constraintTop_toTopOf="@+id/textView19"
@@ -44,7 +44,7 @@
                 android:layout_marginStart="16dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
-                android:text="Map: England"
+                android:text="Map:"
                 app:layout_constraintStart_toEndOf="@+id/textView20"
                 app:layout_constraintTop_toTopOf="@+id/textView19" />
 
@@ -56,7 +56,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
-                android:text="Match Type: Paid"
+                android:text="Match Type:"
                 app:layout_constraintStart_toStartOf="@+id/textView19"
                 app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
@@ -69,7 +69,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
-                android:text="Entry Fee: $ 30"
+                android:text="Entry Fee:"
                 app:layout_constraintStart_toEndOf="@+id/textView22"
                 app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
@@ -93,7 +93,7 @@
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
                 android:textColor="#424242"
-                android:text="Winning prize : $300"
+                android:text="Winning prize :"
                 app:layout_constraintStart_toStartOf="@+id/textView24"
                 app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
@@ -105,7 +105,7 @@
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
                 android:textColor="#424242"
-                android:text="Per Kill : $25"
+                android:text="Per Kill :"
                 app:layout_constraintStart_toEndOf="@+id/textView26"
                 app:layout_constraintTop_toTopOf="@+id/textView26" />
 
@@ -125,7 +125,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:text="Soloo Time - Mtach #1344"
+                android:text="Title"
                 android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
                 android:textColor="#12AC9C"
                 app:layout_constraintStart_toStartOf="parent"
@@ -177,7 +177,7 @@
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
                 android:textColor="#424242"
-                android:text="Type: Duo"
+                android:text="Type:"
                 app:layout_constraintStart_toStartOf="@+id/textView18"
                 app:layout_constraintTop_toBottomOf="@+id/textView18" />
 

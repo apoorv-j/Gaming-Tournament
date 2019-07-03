@@ -41,7 +41,7 @@
                 android:elevation="4dp"
                 android:layout_marginTop="10dp"
                 android:textColor="#424242"
-                android:text="Match Shedule: 03/03/2019 at 01:00PM"
+                android:text="Match Shedule:"
                 app:layout_constraintTop_toBottomOf="@id/lmd_textView19"
                 app:layout_constraintStart_toStartOf="@+id/lmd_textView19"
                 tools:layout_editor_absoluteY="370dp" />
@@ -53,7 +53,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/bg_white"
                 android:elevation="4dp"
-                android:text="Winning prize : $300"
+                android:text="Winning prize :"
                 android:textColor="#424242"
                 app:layout_constraintStart_toStartOf="@+id/lmd_textView24"
                 app:layout_constraintTop_toBottomOf="@+id/lmd_textView24" />
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:text="Soloo Time - Mtach #1344"
+                android:text="Title"
                 android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
                 android:textColor="#12AC9C"
                 app:layout_constraintStart_toStartOf="parent"

@@ -62,8 +62,6 @@ public class Payment implements PaytmPaymentTransactionCallback {
         txnAmount = amount;
 
 
-
-
         //creating a retrofit object.
         retrofit = new Retrofit.Builder()
                 .baseUrl(PaytmApi.BASE_URL)

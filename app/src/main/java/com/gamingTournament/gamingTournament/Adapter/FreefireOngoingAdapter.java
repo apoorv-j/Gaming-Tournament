@@ -46,62 +46,66 @@ public class FreefireOngoingAdapter extends RecyclerView.Adapter<FreefireOngoing
         String currDate = mdformat.format(calendar.getTime());
         String dateTime = item.getDateTime();
 
-        try {
-            Date cDate= mdformat.parse(currDate);
-            Date mDate= mdformat.parse(dateTime);
-            if(cDate.after(mDate) && Integer.parseInt(item.getEntryStatus())==1)
-            {   Log.e( "onBindViewHolder: ","in" );
-                Picasso.get()
-                        .load(URL+"freefire.jpg")
-                        .fit()
-                        .into(holder.imageView);
+        if(dateTime!=null) {
+            try {
+                Date cDate = mdformat.parse(currDate);
+                Date mDate = mdformat.parse(dateTime);
 
-                DateFormat f2 = new SimpleDateFormat("yyyy-MM-dd  hh:mma");
-                dateTime = f2.format(mDate).toLowerCase(); // "12:18am"
+                if (cDate.after(mDate) && Integer.parseInt(item.getEntryStatus()) == 1) {
+                    Log.e("onBindViewHolder: ", "in");
+                    Picasso.get()
+                            .load(URL + "freefire.jpg")
+                            .fit()
+                            .into(holder.imageView);
 
-                holder.matchID.setText(item.getMatchTitle());
-                holder.dateTime.setText(dateTime);
-                holder.winPrize.setText("₹"+item.getWinPrize());
-                holder.killPrize.setText("₹ "+item.getKillPrize());
-                holder.entryFee.setText("₹ "+item.getEntryFee());
+                    DateFormat f2 = new SimpleDateFormat("yyyy-MM-dd  hh:mma");
+                    dateTime = f2.format(mDate).toLowerCase(); // "12:18am"
 
-                holder.map.setText(item.getMap());
-                switch (item.getTeamSize()) {
-                    case "1": holder.type.setText("solo");
-                        break;
-                    case "2": holder.type.setText("duo");
-                        break;
-                    case "4": holder.type.setText("squad");
-                        break;
+                    holder.matchID.setText(item.getMatchTitle()+" - "+item.getMatchID());
+                    holder.dateTime.setText(dateTime);
+                    holder.winPrize.setText("₹" + item.getWinPrize());
+                    holder.killPrize.setText("₹ " + item.getKillPrize());
+                    holder.entryFee.setText("₹ " + item.getEntryFee());
+
+                    holder.map.setText(item.getMap());
+                    switch (item.getTeamSize()) {
+                        case "1":
+                            holder.type.setText("solo");
+                            break;
+                        case "2":
+                            holder.type.setText("duo");
+                            break;
+                        case "4":
+                            holder.type.setText("squad");
+                            break;
+                    }
+
+
+                    final String youtubeID = item.getYoutube();
+
+                    holder.itemView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            listener.onClickListener(position);
+                        }
+                    });
+
+                    holder.spectate.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            listener.spectateListener(position, youtubeID);
+                        }
+                    });
+                } else {
+                    Log.e("onBindViewHolder: ", "out");
+                    holder.itemView.setVisibility(View.GONE);
+                    holder.itemView.setLayoutParams(new RecyclerView.LayoutParams(0, 0));
                 }
 
-
-                final String youtubeID = item.getYoutube();
-
-                holder.itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        listener.onClickListener(position);
-                    }
-                });
-
-                holder.spectate.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        listener.spectateListener(position,youtubeID);
-                    }
-                });
+            } catch (ParseException e) {
+                e.printStackTrace();
             }
-            else
-            {   Log.e( "onBindViewHolder: ","out" );
-                holder.itemView.setVisibility(View.GONE);
-                holder.itemView.setLayoutParams(new RecyclerView.LayoutParams(0, 0));
-            }
-
-        } catch (ParseException e) {
-            e.printStackTrace();
         }
-
     }
 
     @Override

@@ -57,7 +57,7 @@ public class FreefireResultAdapter extends RecyclerView.Adapter<FreefireResultAd
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            holder.matchID.setText(item.getMatchTitle());
+            holder.matchID.setText(item.getMatchTitle()+" - "+item.getMatchID());
             holder.dateTime.setText(dateTime);
             holder.winPrize.setText("₹"+item.getWinPrize());
             holder.killPrize.setText("₹ "+item.getKillPrize());

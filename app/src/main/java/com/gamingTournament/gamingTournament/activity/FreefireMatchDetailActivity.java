@@ -126,7 +126,7 @@ public class FreefireMatchDetailActivity extends FragmentActivity {
                 dateTime = findViewById(R.id.fd_textView23);
                 joinBtn =findViewById(R.id.fd_joinMatchDetails);
 
-                matchTitle.setText(item.getMatchTitle());
+                matchTitle.setText(item.getMatchTitle()+"- Match#"+item.getMatchID());
                 dateTime.setText("Match Schedule "+ finalDateTime);
                 winPrize.setText("Winning Price: ₹"+item.getWinPrize());
                 killPrize.setText("Per Kill: ₹ "+item.getKillPrize());

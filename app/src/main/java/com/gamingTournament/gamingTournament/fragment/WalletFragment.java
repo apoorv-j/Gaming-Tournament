@@ -104,6 +104,12 @@ public class WalletFragment extends Fragment implements View.OnClickListener{
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        user=updateUserBalance();
+    }
+
+    @Override
     public void onClick(View v) {
 
         switch (v.getId())

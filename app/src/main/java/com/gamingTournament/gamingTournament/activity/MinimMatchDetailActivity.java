@@ -130,7 +130,7 @@ public class MinimMatchDetailActivity extends AppCompatActivity {
                                     .fit()
                                     .into(imageView);
 
-                matchTitle.setText(item.getMatchTitle()+" - "+item.getMatchID());
+                matchTitle.setText(item.getMatchTitle()+"- Match#"+item.getMatchID());
                 dateTime.setText("Match Schedule "+item.getDateTime());
                 winPrize.setText("Winning Price: ₹"+item.getWinPrize());
                 entryFee.setText("Entry Fee: ₹ "+item.getEntryFee());

@@ -126,7 +126,7 @@ public class PubgMatchDetailActivity extends FragmentActivity {
                             dateTime = findViewById(R.id.textView23);
                             joinBtn =findViewById(R.id.joinMatchDetails);
 
-                            matchTitle.setText(item.getMatchTitle());
+                            matchTitle.setText(item.getMatchTitle()+"- Match#"+item.getMatchID());
                             dateTime.setText("Match Schedule "+item.getDateTime());
                             winPrize.setText("Winning Price: ₹"+item.getWinPrize());
                             killPrize.setText("Per Kill: ₹ "+item.getKillPrize());

@@ -52,7 +52,7 @@ public class PubgResultAdapter extends RecyclerView.Adapter<PubgResultAdapter.My
                 e.printStackTrace();
             }
 
-            holder.matchID.setText(item.getMatchTitle());
+            holder.matchID.setText(item.getMatchTitle()+" - Match#"+item.getMatchID());
             holder.dateTime.setText(dateTime);
             holder.winPrize.setText("₹"+item.getWinPrize());
             holder.killPrize.setText("₹ "+item.getKillPrize());

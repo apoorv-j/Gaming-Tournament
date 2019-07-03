@@ -54,7 +54,7 @@ public class LudoPlayAdapter extends RecyclerView.Adapter<LudoPlayAdapter.MyView
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            holder.matchID.setText(item.getMatchID());
+            holder.matchID.setText("- Match#"+item.getMatchID());
             holder.matchTitle.setText(item.getMatchTitle());
             holder.dateTime.setText(dateTime);
             holder.winPrize.setText("₹" + item.getWinPrize());
