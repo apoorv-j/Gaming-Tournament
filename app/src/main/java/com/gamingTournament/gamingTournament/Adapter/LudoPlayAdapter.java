@@ -54,8 +54,8 @@ public class LudoPlayAdapter extends RecyclerView.Adapter<LudoPlayAdapter.MyView
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            holder.matchID.setText("- Match#"+item.getMatchID());
-            holder.matchTitle.setText(item.getMatchTitle());
+
+            holder.matchTitle.setText(item.getMatchTitle()+" -Match#"+item.getMatchID());
             holder.dateTime.setText(dateTime);
             holder.winPrize.setText("₹" + item.getWinPrize());
             holder.entryFee.setText("₹ " + item.getEntryFee());
@@ -103,7 +103,7 @@ public class LudoPlayAdapter extends RecyclerView.Adapter<LudoPlayAdapter.MyView
 
     class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView matchID,dateTime,winPrize,entryFee,playersJoined,maxPlayers,matchTitle,spotsLeft;
+        TextView dateTime,winPrize,entryFee,playersJoined,maxPlayers,matchTitle,spotsLeft;
         ImageView imageView;
         ProgressBar progressBar;
         Button join;
@@ -116,7 +116,6 @@ public class LudoPlayAdapter extends RecyclerView.Adapter<LudoPlayAdapter.MyView
             winPrize = view.findViewById(R.id.textView611);
             entryFee = view.findViewById(R.id.textView711);
             maxPlayers =view.findViewById(R.id.textView811);
-            matchID = view.findViewById(R.id.textView181);
             dateTime = view.findViewById(R.id.textView191);
             progressBar = view.findViewById(R.id.progressBar2);
             playersJoined = view.findViewById(R.id.textView161);

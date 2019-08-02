@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:text="Contact Us"
         android:textStyle="bold"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textAlignment="center"
         android:textColor="@color/black"
         />
@@ -23,9 +23,12 @@
         >
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:padding="4dp"
+            android:textSize="20sp"
             android:text="@string/contact_text"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textIsSelectable="true"
+            />
     </ScrollView>
 </FrameLayout>

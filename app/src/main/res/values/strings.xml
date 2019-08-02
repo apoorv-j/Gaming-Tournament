@@ -81,10 +81,9 @@ Just Download &amp; Try Gaming Tournament App: http://gamingtournament.in/downlo
     </string>
 
     <string name="ludoRules">
-• Take screenshot of the result after you won the game and send it to 9560537857 Whatsapp to claim your prize money . \n\n
-• If you dont send the screenshot in 10 minutes after game you are not eligible for claiming the prize. Refund in such cases wont be entertained.\n\n
-• Screenshots are only required only for 2 player games.   \n\n
-• To play ludo tournaments , use only ludo king game available on playstore . Do not use any hacks . \n\n
+• Match will be of 2 goti Rule means you do not have to play for long hours just make your two tokkens (goti) to the home and you will be  declared as winner. \n\n
+• There will be 4 players game of 2 goti rule and 2 player game of full goti means 4 goti rule prize money may vary . \n\n
+• To play ludo tournaments , use only ludo king game available on playstore. Do not use any hacks . \n\n
 • There will be 2 players game and 4 players game everyday ,choose your appropriate category . prize money may vary .  \n\n
 • 18 percent tax will be deducted from the amount won by you in case of every 2 player game you won as convenience charge. \n\n
 • You get double of your money if you won in 4 players game . There will be no deduction of tax and convenience Fee . \n\n
@@ -99,6 +98,7 @@ Just Download &amp; Try Gaming Tournament App: http://gamingtournament.in/downlo
 •  This match is Paid match. To participate, you have to pay the entry fee amount. \n\n
 •  Please note that the listed entry fee is per individual.  \n\n
     </string>
+
     <string name="pubgRules">
 •  No new PUBG Accouts Allowed. PUBG Accounts with Level less than 20 are not allowed to participate. Such participants will be kicked from the room and they will not be given refund.\n\n
 •  If in anyway you fail to join the room by the match start time then we are not responsible for it. Refund in such cases won\'t be processed. So make sure to join on time.\n\n
@@ -134,6 +134,30 @@ Currently, the platform has got support for \n
 Ludo king, Mini militia , Free fire and PUBG Mobile, a Trending Game. Users can join Custom Rooms, and Get Rewards for Chicken Dinner and also for each Kill they Score. Sounds cool, huh?? Give it a try!
     </string>
 
+    <!--Refund Policy-->
+    <string name="refund_policy">
+<b>1. </b><p>The amount you request to withdraw should be in your wallet
+to make a request, and the amount that is in your wallet
+should have added by payment portal/Friend Transfer/
+        Game Winnings only.</p> \n
+<b>2. </b>The amount you request will be transferred to your paytm
+account within a day, if there is a delay in the payment you
+will be noticed as soon as possible.\n
+<b>3. </b>Once requested a withdraw request you cannot cancel the
+transaction and the amount will be deducted from your
+wallet.\n
+<b>4. </b>If the transaction is declined the amount will be sent
+immediately into your wallet and you can request again.\n
+<b>5. </b>If you are found hacking/Violating any rules and regulations
+of the app which may harm the app environment your
+account and balance will be terminated.\n
+<b>6. </b>Make sure you have done KYC and other required
+verifications for accepting payments on your paytm number.\n
+<b>7. </b>If you enter wrong paytm number and make a withdraw
+request and the payment is made by the admin, the admin
+won’t be liable for the same, no refund will be processed in
+such cases.\n
+    </string>
 
     <!--Terms and conditions-->
     <string name="privacy_text">
@@ -201,17 +225,20 @@ Requests received later than 1-2 business days prior to the end of the current s
 
         <b>REFUND POLICY</b> \n\n
 
-We will try our best to create the suitable design concepts for our clients.
+We will try our best to create the suitable design concepts for our clients.\n\n
 
-In case any client is not completely satisfied with our products we can provide a refund. 
+In case any client is not completely satisfied with our products we can provide a refund. \n\n
 
-If paid by credit card, refunds will be issued to the original credit card provided at the time of purchase and in case of payment gateway name payments refund will be made to the same account.
+If paid by credit card, refunds will be issued to the original credit card provided at the time of purchase and in case of payment gateway name payments refund will be made to the same account.\n\n
          
     </string>
 
-    <string name="contact_text">Mr.Lakshay arora. (Grievance Officer)
-www.gamingtournament.in
-Email: Gamingbox862@gmail.com</string>
+    <string name="contact_text">
+        Mr.Lakshay arora <b>(Grievance Officer)</b> \n\n
+        <b>Websit: </b><a href="http://www.gamingtournament.in">www.gamingtournament.in</a> \n\n
+        <b>Email: </b>Gamingbox862@gmail.com \n\n
+        <b>Landline: </b>+911145725346 \n\n
+    </string>
 
     <string name="tnc_text">
 Your website may use the Terms and Conditions given below.
@@ -249,4 +276,7 @@ In no event shall Company or any parties, organizations or entities associated w
 
 
     </string>
+
+    <string name="critical_update_text">Please, update app to new version to continue using.</string>
+    <string name="normal_update_text">Please, update the app to get the latest features.</string>
 </resources>

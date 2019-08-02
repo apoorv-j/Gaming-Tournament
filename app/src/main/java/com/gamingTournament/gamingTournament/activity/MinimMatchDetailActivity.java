@@ -131,7 +131,7 @@ public class MinimMatchDetailActivity extends AppCompatActivity {
                                     .into(imageView);
 
                 matchTitle.setText(item.getMatchTitle()+"- Match#"+item.getMatchID());
-                dateTime.setText("Match Schedule "+item.getDateTime());
+                dateTime.setText("Match Schedule "+finalDateTime);
                 winPrize.setText("Winning Price: ₹"+item.getWinPrize());
                 entryFee.setText("Entry Fee: ₹ "+item.getEntryFee());
                 map.setText("Map: "+item.getMap());

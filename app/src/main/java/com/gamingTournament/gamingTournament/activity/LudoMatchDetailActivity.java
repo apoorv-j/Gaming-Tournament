@@ -132,7 +132,7 @@ public class LudoMatchDetailActivity extends AppCompatActivity {
                                     .fit()
                                     .into(imageView);
                 matchTitle.setText(item.getMatchTitle()+"- Match#"+item.getMatchID());
-                dateTime.setText("Match Schedule "+item.getDateTime());
+                dateTime.setText("Match Schedule "+finalDateTime);
                 winPrize.setText("Winning Price: ₹"+item.getWinPrize());
                 entryFee.setText("Entry Fee: ₹ "+item.getEntryFee());
                 maxPlayers.setText("No. of Players: "+item.getMaxPlayers());

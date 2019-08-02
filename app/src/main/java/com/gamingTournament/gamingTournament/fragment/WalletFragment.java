@@ -148,53 +148,77 @@ public class WalletFragment extends Fragment implements View.OnClickListener{
 
                                     break;
 
-            case R.id.redeem :  View redeemView = getLayoutInflater().inflate(R.layout.dialaog_redeem,null);
-                                editTextRedeemAmount = redeemView.findViewById(R.id.amount_redeem_dialog);
-                                editTextPaytm1 = redeemView.findViewById(R.id.paytmNo1);
-                                editTextPaytm2 = redeemView.findViewById(R.id.paytmNo2);
-
-                                TextView rCancel,redeemBtn;
-                                rCancel = redeemView.findViewById(R.id.cancel_redeem_dialog);
-                                redeemBtn = redeemView.findViewById(R.id.redeem_btn_dialog);
-                                rBuilder.setView(redeemView);
+            case R.id.redeem :  View refundPolicy = getLayoutInflater().inflate(R.layout.dialog_refund_policy,null);
+                                TextView btnDisagree,btnAgree;
+                                btnAgree = refundPolicy.findViewById(R.id.btn_agree);
+                                btnDisagree = refundPolicy.findViewById(R.id.btn_disagree);
+                                rBuilder.setView(refundPolicy);
                                 rdialog = rBuilder.create();
                                 rdialog.show();
 
-                                rCancel.setOnClickListener(new View.OnClickListener() {
+                                btnDisagree.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
                                         rdialog.dismiss();
                                     }
                                 });
 
-                                redeemBtn.setOnClickListener(new View.OnClickListener() {
+                                btnAgree.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        redeemAmount =editTextRedeemAmount.getText().toString();
-                                        if (redeemAmount.isEmpty() || Integer.parseInt(redeemAmount)<10) {
-                                            editTextRedeemAmount.setError("Invalid Amount");
-                                            editTextRedeemAmount.requestFocus();
-                                            return;
-                                        }
-                                        paytmNum1 = editTextPaytm1.getText().toString();
-                                        paytmNum2 = editTextPaytm2.getText().toString();
-                                        if (paytmNum1.isEmpty() || !android.util.Patterns.PHONE.matcher(paytmNum1).matches()) {
-                                            editTextPaytm1.setError("Enter a valid mobile number");
-                                            editTextPaytm1.requestFocus();
-                                            return;
+                                    rdialog.dismiss();
 
-                                        }
-                                        if (!paytmNum2.equals(paytmNum1)) {
-                                            editTextPaytm2.setError("Enter the same number as above");
-                                            editTextPaytm2.requestFocus();
-                                            return;
+                                    View redeemView = getLayoutInflater().inflate(R.layout.dialaog_redeem,null);
+                                    editTextRedeemAmount = redeemView.findViewById(R.id.amount_redeem_dialog);
+                                    editTextPaytm1 = redeemView.findViewById(R.id.paytmNo1);
+                                    editTextPaytm2 = redeemView.findViewById(R.id.paytmNo2);
 
-                                        }
+                                    TextView rCancel,redeemBtn;
+                                    rCancel = redeemView.findViewById(R.id.cancel_redeem_dialog);
+                                    redeemBtn = redeemView.findViewById(R.id.redeem_btn_dialog);
+                                    rBuilder.setView(redeemView);
+                                    rdialog = rBuilder.create();
+                                    rdialog.show();
 
-                                        else {
-                                            redeemFunction();
-
+                                    rCancel.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            rdialog.dismiss();
                                         }
+                                    });
+
+                                    redeemBtn.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            redeemAmount =editTextRedeemAmount.getText().toString();
+                                            if (redeemAmount.isEmpty() || Integer.parseInt(redeemAmount)<10) {
+                                                editTextRedeemAmount.setError("Invalid Amount");
+                                                editTextRedeemAmount.requestFocus();
+                                                return;
+                                            }
+                                            paytmNum1 = editTextPaytm1.getText().toString();
+                                            paytmNum2 = editTextPaytm2.getText().toString();
+                                            if (paytmNum1.isEmpty() || !android.util.Patterns.PHONE.matcher(paytmNum1).matches()) {
+                                                editTextPaytm1.setError("Enter a valid mobile number");
+                                                editTextPaytm1.requestFocus();
+                                                return;
+
+                                            }
+                                            if (!paytmNum2.equals(paytmNum1)) {
+                                                editTextPaytm2.setError("Enter the same number as above");
+                                                editTextPaytm2.requestFocus();
+                                                return;
+
+                                            }
+
+                                            else {
+                                                redeemFunction();
+
+                                            }
+                                        }
+                                    });
+
+
                                     }
                                 });
                                 break;

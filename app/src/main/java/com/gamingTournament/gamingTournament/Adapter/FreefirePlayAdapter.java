@@ -67,8 +67,7 @@ public class FreefirePlayAdapter extends RecyclerView.Adapter<FreefirePlayAdapte
                     .load(URL+"freefire.jpg")
                     .fit()
                     .into(holder.imageView);
-            holder.matchID.setText("- Match#"+item.getMatchID());
-            holder.matchTitle.setText(item.getMatchTitle());
+            holder.matchTitle.setText(item.getMatchTitle()+" -Match#"+item.getMatchID());
             holder.dateTime.setText(dateTime);
             holder.winPrize.setText("₹" + item.getWinPrize());
             holder.killPrize.setText("₹ " + item.getKillPrize());
@@ -126,7 +125,7 @@ public class FreefirePlayAdapter extends RecyclerView.Adapter<FreefirePlayAdapte
 
     class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView matchID,dateTime,killPrize,winPrize,entryFee,type,map,playersJoined,matchTitle,posLeft;
+        TextView dateTime,killPrize,winPrize,entryFee,type,map,playersJoined,matchTitle,posLeft;
         ImageView imageView;
         ProgressBar progressBar;
         Button join;
@@ -140,7 +139,6 @@ public class FreefirePlayAdapter extends RecyclerView.Adapter<FreefirePlayAdapte
             entryFee = view.findViewById(R.id.fp_textView800);
             type = view.findViewById(R.id.fp_textView120);
             map = view.findViewById(R.id.fp_textView130);
-            matchID = view.findViewById(R.id.fp_textView180);
             dateTime = view.findViewById(R.id.fp_textView190);
             progressBar = view.findViewById(R.id.progressBar1);
             playersJoined = view.findViewById(R.id.fp_textView160);

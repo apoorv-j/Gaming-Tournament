@@ -9,6 +9,7 @@ import com.gamingTournament.gamingTournament.Lists.list_room_details;
 import com.gamingTournament.gamingTournament.Lists.list_top_players;
 import com.gamingTournament.gamingTournament.Lists.list_transactions;
 import com.gamingTournament.gamingTournament.Lists.list_winner;
+import com.gamingTournament.gamingTournament.Lists.update_details;
 
 import java.util.List;
 
@@ -18,6 +19,10 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface ApiInterface {
+
+    //Version Check
+    @GET("app-ver.php")
+    Call<List<update_details>> updateDetails(@Query("salt") String salt);
 
     //PUBG
     @GET("pubg/match-details.php")

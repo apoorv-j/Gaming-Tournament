@@ -34,33 +34,19 @@
 
         <TextView
             android:id="@+id/fp_textView000"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:text="Match"
+            android:layout_marginEnd="5dp"
+            android:text="Solo Time - Match #1344"
             android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
             android:textColor="@android:color/darker_gray"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="@id/fp_textView180"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/fp_imageView1"
             app:layout_constraintTop_toTopOf="@+id/fp_imageView1" />
 
-        <TextView
-            android:id="@+id/fp_textView180"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="#1344"
-            android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="18sp"
-            app:layout_constraintLeft_toRightOf="@+id/fp_textView000"
-            app:layout_constraintTop_toTopOf="@+id/fp_imageView1"
-            android:layout_marginLeft="12dp"
-
-            />
         <TextView
             android:id="@+id/fp_textView200"
             android:layout_width="wrap_content"

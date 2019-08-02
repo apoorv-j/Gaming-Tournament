@@ -15,6 +15,14 @@ public class Util {
         fragmentActivity.getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.main_constraint, fragment)
+                .addToBackStack("MainActivity")
+                .commit();
+    }
+
+    public static void changeGameFragment(FragmentActivity fragmentActivity, Fragment fragment){
+        fragmentActivity.getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.main_constraint, fragment)
                 .addToBackStack(null)
                 .commit();
     }

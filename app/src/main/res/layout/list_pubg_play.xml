@@ -35,33 +35,19 @@
 
         <TextView
             android:id="@+id/pp_textView"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:text="Match -"
+            android:layout_marginEnd="5dp"
+            android:text="Solo Time - Match #1344"
             android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
             android:textColor="@android:color/darker_gray"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="@id/pp_textView18"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/pp_imageView"
             app:layout_constraintTop_toTopOf="@+id/pp_imageView" />
 
-        <TextView
-            android:id="@+id/pp_textView18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="#1344"
-            android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="18sp"
-            app:layout_constraintLeft_toRightOf="@+id/pp_textView"
-            app:layout_constraintTop_toTopOf="@+id/pp_imageView"
-            android:layout_marginLeft="12dp"
-
-            />
         <TextView
             android:id="@+id/pp_textView2"
             android:layout_width="wrap_content"

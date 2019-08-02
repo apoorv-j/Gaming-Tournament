@@ -1,7 +1,9 @@
 package com.gamingTournament.gamingTournament.activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -14,8 +16,10 @@ import com.gamingTournament.gamingTournament.API.ApiClient;
 import com.gamingTournament.gamingTournament.API.ApiInterface;
 import com.gamingTournament.gamingTournament.API.PaytmApi;
 import com.gamingTournament.gamingTournament.Adapter.MainAdapter;
+import com.gamingTournament.gamingTournament.BuildConfig;
 import com.gamingTournament.gamingTournament.Lists.Paytm;
 import com.gamingTournament.gamingTournament.Lists.Users;
+import com.gamingTournament.gamingTournament.Lists.update_details;
 import com.gamingTournament.gamingTournament.R;
 import com.gamingTournament.gamingTournament.SharedPrefManager;
 import com.gamingTournament.gamingTournament.Util;
@@ -35,6 +39,7 @@ import com.gamingTournament.gamingTournament.fragment.tncFragment;
 import com.google.android.material.navigation.NavigationView;
 
 import java.io.IOException;
+import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -62,12 +67,16 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         RecyclerView recyclerView;
         MainAdapter adapter;
         LinearLayoutManager manager;
-        @Override
-    protected void onCreate(Bundle savedInstanceState) {
+        ApiInterface apiInterface;
+
+    @Override
+        protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-            user = getUserBalance();
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+
+        user = getUserBalance();
 
         Toolbar toolbar = findViewById(R.id.toolbar1);
         setActionBar(toolbar);
@@ -116,7 +125,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
         user = SharedPrefManager.getInstance(MainActivity.this).getUser();
 
-        ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
         Call<ResponseBody> call = apiInterface.getBalance("PB_PUBG",user.getUname());
 
         call.enqueue(new Callback<ResponseBody>() {
@@ -159,12 +167,79 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     @Override
     protected void onStart() {
         super.onStart();
+
+        Call<List<update_details>> call = apiInterface.updateDetails("PB_PUBG");
+        call.enqueue(new Callback<List<update_details>>() {
+            @Override
+            public void onResponse(Call<List<update_details>> call, Response<List<update_details>> response) {
+                final update_details item = response.body().get(0);
+                String currVersion = BuildConfig.VERSION_NAME;
+                String newVersion = item.getVersion();
+
+                if (!currVersion.equals(newVersion)) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    View dialogView = getLayoutInflater().inflate(R.layout.dialog_update, null);
+                    builder.setView(dialogView);
+                    final AlertDialog dialog = builder.create();
+                    TextView btnLater, btnUpdate, updateText;
+
+                    btnLater = dialogView.findViewById(R.id.btn_later);
+                    btnUpdate = dialogView.findViewById(R.id.btn_update);
+                    updateText = dialogView.findViewById(R.id.update_dialog_textView);
+
+                    dialog.show();
+                    dialog.setCancelable(false);
+
+                    btnUpdate.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Uri uri = Uri.parse(item.getUpdate_url());
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+
+                    if(item.getCritical_update().equals("true"))
+                    {
+                        updateText.setText(R.string.critical_update_text);
+
+                        btnLater.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                finish();
+                            }
+                        });
+                    }
+                    else
+                    {
+                        dialog.setCancelable(true);
+
+                        updateText.setText(R.string.normal_update_text);
+
+                        btnLater.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                dialog.dismiss();
+                            }
+                        });
+                    }
+                }
+
+                else if(!SharedPrefManager.getInstance(MainActivity.this).isLoggedIn()){
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<update_details>> call, Throwable t) {
+
+            }
+        });
+
         user=getUserBalance();
-        if(!SharedPrefManager.getInstance(this).isLoggedIn()){
-            Intent intent = new Intent(this, LoginActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-        }
+
 
     }
 
@@ -272,19 +347,25 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     public void onCardClick(int position) {
         switch (position)
         {
-            case 0: Util.changeDrawerFragment(MainActivity.this, new PubgFragment());
+            case 0: Util.changeGameFragment(MainActivity.this, new PubgFragment());
                 break;
 
-            case 1: Util.changeDrawerFragment(MainActivity.this, new FreefireFragment());
+            case 1: Util.changeGameFragment(MainActivity.this, new FreefireFragment());
                 break;
 
-            case 2: Util.changeDrawerFragment(MainActivity.this, new MinimFragment());
+            case 2: Util.changeGameFragment(MainActivity.this, new MinimFragment());
                 break;
 
-            case 3: Util.changeDrawerFragment(MainActivity.this, new LudoFragment());
+            case 3: Util.changeGameFragment(MainActivity.this, new LudoFragment());
                 break;
 
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        getSupportFragmentManager().popBackStack("MainActivity",-1);
     }
 }
 

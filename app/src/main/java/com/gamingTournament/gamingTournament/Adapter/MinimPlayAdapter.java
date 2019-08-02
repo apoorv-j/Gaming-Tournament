@@ -60,9 +60,8 @@ public class MinimPlayAdapter extends RecyclerView.Adapter<MinimPlayAdapter.MyVi
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            holder.matchID.setText(" - Match#"+item.getMatchID());
             holder.map.setText(item.getMap());
-            holder.matchTitle.setText(item.getMatchTitle());
+            holder.matchTitle.setText(item.getMatchTitle()+" -Match#"+item.getMatchID());
             holder.dateTime.setText(dateTime);
             holder.winPrize.setText("₹" + item.getWinPrize());
             holder.entryFee.setText("₹ " + item.getEntryFee());
@@ -108,7 +107,7 @@ public class MinimPlayAdapter extends RecyclerView.Adapter<MinimPlayAdapter.MyVi
 
     class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView matchID,dateTime,winPrize,entryFee,map,playersJoined,matchTitle,spotsLeft;
+        TextView dateTime,winPrize,entryFee,map,playersJoined,matchTitle,spotsLeft;
         ImageView imageView;
         ProgressBar progressBar;
         Button join;
@@ -121,7 +120,6 @@ public class MinimPlayAdapter extends RecyclerView.Adapter<MinimPlayAdapter.MyVi
             matchTitle=view.findViewById(R.id.textView222);
             winPrize = view.findViewById(R.id.textView622);
             entryFee = view.findViewById(R.id.textView822);
-            matchID = view.findViewById(R.id.textView182);
             dateTime = view.findViewById(R.id.textView192);
             progressBar = view.findViewById(R.id.progressBar3);
             playersJoined = view.findViewById(R.id.textView162);

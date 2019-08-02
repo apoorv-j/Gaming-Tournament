@@ -60,8 +60,7 @@ public class PubgPlayAdapter extends RecyclerView.Adapter<PubgPlayAdapter.MyView
                 e.printStackTrace();
             }
 
-            holder.matchID.setText(" - Match#"+item.getMatchID());
-            holder.matchTitle.setText(item.getMatchTitle());
+            holder.matchTitle.setText(item.getMatchTitle()+" -Match#"+item.getMatchID());
             holder.dateTime.setText(dateTime);
             holder.winPrize.setText("₹" + item.getWinPrize());
             holder.killPrize.setText("₹ " + item.getKillPrize());
@@ -119,7 +118,7 @@ public class PubgPlayAdapter extends RecyclerView.Adapter<PubgPlayAdapter.MyView
 
     class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView matchID,matchTitle,dateTime,killPrize,winPrize,entryFee,mode,type,map,playersJoined,posLeft;
+        TextView matchTitle,dateTime,killPrize,winPrize,entryFee,mode,type,map,playersJoined,posLeft;
         ImageView imageView;
         ProgressBar progressBar;
         Button join;
@@ -135,7 +134,6 @@ public class PubgPlayAdapter extends RecyclerView.Adapter<PubgPlayAdapter.MyView
             type = view.findViewById(R.id.pp_textView12);
             mode = view.findViewById(R.id.pp_textView13);
             map = view.findViewById(R.id.pp_textView14);
-            matchID = view.findViewById(R.id.pp_textView18);
             matchTitle = view.findViewById(R.id.pp_textView);
             dateTime = view.findViewById(R.id.pp_textView19);
             progressBar = view.findViewById(R.id.progressBar);
