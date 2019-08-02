@@ -92,7 +92,7 @@ public class PubgMatchDetailActivity extends FragmentActivity {
                 Date d = null;
                 try {
                     d = f1.parse(dateTime1);
-                    DateFormat f2 = new SimpleDateFormat("yyyy-MM-dd  hh:mma");
+                    DateFormat f2 = new SimpleDateFormat("dd-MM-yyyy   hh:mm a");
                     dateTime1 = f2.format(d).toLowerCase(); // "12:18am"
                 } catch (ParseException e) {
                     e.printStackTrace();

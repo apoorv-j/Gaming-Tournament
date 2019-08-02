@@ -62,7 +62,7 @@ public class MinimResultAdapter extends RecyclerView.Adapter<MinimResultAdapter.
             Date d = null;
             try {
                 d = f1.parse(dateTime);
-                DateFormat f2 = new SimpleDateFormat("yyyy-MM-dd  hh:mma");
+                DateFormat f2 = new SimpleDateFormat("dd-MM-yyyy   hh:mm a");
                 dateTime = f2.format(d).toLowerCase(); // "12:18am"
             } catch (ParseException e) {
                 e.printStackTrace();

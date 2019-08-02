@@ -58,7 +58,7 @@ public class FreefireOngoingAdapter extends RecyclerView.Adapter<FreefireOngoing
                             .fit()
                             .into(holder.imageView);
 
-                    DateFormat f2 = new SimpleDateFormat("yyyy-MM-dd  hh:mma");
+                    DateFormat f2 = new SimpleDateFormat("dd-MM-yyyy   hh:mm a");
                     dateTime = f2.format(mDate).toLowerCase(); // "12:18am"
 
                     holder.matchID.setText(item.getMatchTitle()+" - "+item.getMatchID());
