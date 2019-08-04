@@ -34,6 +34,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 public class FreefireResultDetailActivity extends FragmentActivity {
     String posString;
@@ -58,6 +59,11 @@ public class FreefireResultDetailActivity extends FragmentActivity {
         final Intent intent = getIntent();
         posString= intent.getStringExtra("position");
         position= Integer.parseInt(posString);
+
+        Toolbar toolbar = findViewById(R.id.toolbar_back);
+        setActionBar(toolbar);
+        Objects.requireNonNull(getActionBar()).setDisplayHomeAsUpEnabled(true);
+        getActionBar().setDisplayShowHomeEnabled(true);
 
         manager = new LinearLayoutManager(this);
         wmanager = new LinearLayoutManager(this);
@@ -124,5 +130,11 @@ public class FreefireResultDetailActivity extends FragmentActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

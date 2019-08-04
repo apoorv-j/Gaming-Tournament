@@ -39,6 +39,8 @@ public class FreefireResultAdapter extends RecyclerView.Adapter<FreefireResultAd
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
+        holder.setIsRecyclable(false);
+
         list_play item = matchDetails.get(position);
 
         if(Integer.parseInt(item.getEntryStatus())!=1)
@@ -57,7 +59,7 @@ public class FreefireResultAdapter extends RecyclerView.Adapter<FreefireResultAd
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            holder.matchID.setText(item.getMatchTitle()+" - "+item.getMatchID());
+            holder.matchID.setText(item.getMatchTitle()+" - Match#"+item.getMatchID());
             holder.dateTime.setText(dateTime);
             holder.winPrize.setText("₹"+item.getWinPrize());
             holder.killPrize.setText("₹ "+item.getKillPrize());

@@ -26,6 +26,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.Observer;
@@ -57,6 +58,11 @@ public class ResultDetailActivity extends FragmentActivity {
         final Intent intent = getIntent();
         posString= intent.getStringExtra("position");
         position= Integer.parseInt(posString);
+
+        Toolbar toolbar = findViewById(R.id.toolbar_back);
+        setActionBar(toolbar);
+        Objects.requireNonNull(getActionBar()).setDisplayHomeAsUpEnabled(true);
+        getActionBar().setDisplayShowHomeEnabled(true);
 
         manager = new LinearLayoutManager(this);
         wmanager = new LinearLayoutManager(this);
@@ -115,10 +121,6 @@ public class ResultDetailActivity extends FragmentActivity {
                 });
             }});
 
-
-
-
-
         ViewModel resultmodel = ViewModelProviders.of(this).get(PubgResultViewModel.class);
         ((PubgResultViewModel) resultmodel).matchResults().observe(this, new Observer<List<list_match_results>>() {
             @Override
@@ -137,18 +139,12 @@ public class ResultDetailActivity extends FragmentActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId())
-        {
-
-            case android.R.id.home : onBackPressed();
-                break;
-
-        }
-
-        return super.onOptionsItemSelected(item);
+    public boolean onNavigateUp() {
+        onBackPressed();
+        return true;
     }
+
+
 }
 
 

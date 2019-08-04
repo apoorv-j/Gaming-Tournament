@@ -39,6 +39,7 @@ public class FreefireOngoingAdapter extends RecyclerView.Adapter<FreefireOngoing
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
+        holder.setIsRecyclable(false);
         list_play item = freefireMatchDetails.get(position);
 
         Calendar calendar = Calendar.getInstance();

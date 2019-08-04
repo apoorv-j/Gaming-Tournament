@@ -44,6 +44,8 @@ public class FreefirePlayAdapter extends RecyclerView.Adapter<FreefirePlayAdapte
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
+
+        holder.setIsRecyclable(false);
         list_play item = matchDetails.get(position);
 
         if(Integer.parseInt(item.getEntryStatus())==1) {
@@ -61,12 +63,11 @@ public class FreefirePlayAdapter extends RecyclerView.Adapter<FreefirePlayAdapte
                 e.printStackTrace();
             }
 
-
-
             Picasso.get()
                     .load(URL+"freefire.jpg")
                     .fit()
                     .into(holder.imageView);
+
             holder.matchTitle.setText(item.getMatchTitle()+" -Match#"+item.getMatchID());
             holder.dateTime.setText(dateTime);
             holder.winPrize.setText("₹" + item.getWinPrize());
@@ -92,6 +93,7 @@ public class FreefirePlayAdapter extends RecyclerView.Adapter<FreefirePlayAdapte
                 holder.join.setBackgroundColor(Color.parseColor("#616161"));
                 holder.join.setClickable(false);
             }
+
             else {
                 holder.join.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -116,6 +118,11 @@ public class FreefirePlayAdapter extends RecyclerView.Adapter<FreefirePlayAdapte
         }
 
 
+    }
+
+    @Override
+    public void onAttachedToRecyclerView(@NonNull RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
     }
 
     @Override

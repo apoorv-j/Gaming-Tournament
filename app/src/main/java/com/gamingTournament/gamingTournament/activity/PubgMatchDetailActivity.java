@@ -234,7 +234,17 @@ public class PubgMatchDetailActivity extends FragmentActivity {
             nextBTN.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    switch (item.getTeamSize()) {
+                    int maxPlayers = Integer.parseInt(item.getMaxPlayers());
+                    int playersJoined = Integer.parseInt(item.getPlayerJoined());
+                    String teamSize = item.getTeamSize();
+
+                    if(maxPlayers-playersJoined==1)
+                        teamSize = "1";
+                    else if((maxPlayers-playersJoined==2)||(maxPlayers-playersJoined==3))
+                        teamSize = "2";
+
+
+                    switch (teamSize) {
                         case "1": //solo
                             View ignView = getLayoutInflater().inflate(R.layout.dialog_ign_solo, null);
                             final EditText player = ignView.findViewById(R.id.ign_edit_dialog_solo);

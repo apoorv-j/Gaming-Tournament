@@ -37,6 +37,7 @@ public class PubgOngoingAdapter extends RecyclerView.Adapter<PubgOngoingAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
+        holder.setIsRecyclable(false);
         list_play item = matchDetails.get(position);
 
         Calendar calendar = Calendar.getInstance();

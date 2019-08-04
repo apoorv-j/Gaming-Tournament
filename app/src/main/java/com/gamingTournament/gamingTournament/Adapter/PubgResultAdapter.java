@@ -37,6 +37,7 @@ public class PubgResultAdapter extends RecyclerView.Adapter<PubgResultAdapter.My
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
+        holder.setIsRecyclable(false);
         list_play item = matchDetails.get(position);
 
         if(Integer.parseInt(item.getEntryStatus())!=1)

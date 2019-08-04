@@ -24,6 +24,7 @@ import com.gamingTournament.gamingTournament.Lists.list_play;
 import com.gamingTournament.gamingTournament.R;
 import com.gamingTournament.gamingTournament.ViewModels.FreefirePlayViewModel;
 import com.gamingTournament.gamingTournament.ViewModels.PlayViewModel;
+import com.gamingTournament.gamingTournament.activity.FreefireResultDetailActivity;
 import com.gamingTournament.gamingTournament.activity.ResultDetailActivity;
 
 import java.util.List;
@@ -72,7 +73,7 @@ public class FreefireResultFragment extends Fragment implements FreefireResultAd
     @Override
     public void onClickListener(int position) {
 
-        Intent intent = new Intent(getActivity(), ResultDetailActivity.class);
+        Intent intent = new Intent(getActivity(), FreefireResultDetailActivity.class);
         intent.putExtra("position",String.valueOf(position));
         startActivity(intent);
     }

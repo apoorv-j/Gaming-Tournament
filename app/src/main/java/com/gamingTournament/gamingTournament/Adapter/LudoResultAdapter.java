@@ -47,6 +47,7 @@ public class LudoResultAdapter extends RecyclerView.Adapter<LudoResultAdapter.My
 
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
+        holder.setIsRecyclable(false);
         list_play item = matchDetails.get(position);
         if(Integer.parseInt(item.getEntryStatus())!=1)
         {

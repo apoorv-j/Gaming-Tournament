@@ -49,6 +49,7 @@ public class MinimResultAdapter extends RecyclerView.Adapter<MinimResultAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
+        holder.setIsRecyclable(false);
         list_play item = matchDetails.get(position);
 
         if(Integer.parseInt(item.getEntryStatus())!=1)

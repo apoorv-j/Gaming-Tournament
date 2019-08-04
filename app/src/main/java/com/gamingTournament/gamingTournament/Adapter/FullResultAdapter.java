@@ -35,8 +35,8 @@ public class FullResultAdapter extends RecyclerView.Adapter<FullResultAdapter.My
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         list_match_results item = matchResults.get(position);
         if(matchID.equals(item.getMatchID()))
-        {   sNo++;
-            holder.pID.setText(String.valueOf(sNo));
+        {
+            holder.pID.setText("●");
             holder.pName.setText(item.getPlayerID());
             holder.pKills.setText(item.getKills());
             int winnings = Integer.parseInt(item.getKills())*Integer.parseInt(per_kill);

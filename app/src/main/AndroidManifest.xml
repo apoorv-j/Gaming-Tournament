@@ -17,12 +17,15 @@
         android:largeHeap="true"
         android:usesCleartextTraffic="true"
         android:hardwareAccelerated="true">
-        <activity android:name=".activity.MinimMatchDetailActivity"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar.Bridge"></activity>
+        <activity
+            android:name=".activity.MinimMatchDetailActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar.Bridge" />
         <activity android:name=".activity.LudoMatchDetailActivity"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar.Bridge"/>
         <activity android:name=".activity.FreefireMatchDetailActivity"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar.Bridge"/>
+        <activity android:name=".activity.FreefireResultDetailActivity"
+            />
         <activity android:name=".activity.PasswordResetActivity"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar.Bridge"/>
         <activity

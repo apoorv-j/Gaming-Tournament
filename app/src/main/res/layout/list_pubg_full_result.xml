@@ -23,22 +23,22 @@
         android:id="@+id/fr_textView31"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:text="Apoorv Jain"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/fr_textView32"
-        app:layout_constraintEnd_toStartOf="@+id/fr_textView34"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fr_textView32"
-        app:layout_constraintTop_toTopOf="@+id/fr_textView32" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/fr_textView34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
         android:text="10"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/fr_textView31"
         app:layout_constraintEnd_toStartOf="@+id/fr_textView33"
-        app:layout_constraintStart_toEndOf="@+id/fr_textView31"
         app:layout_constraintTop_toTopOf="@+id/fr_textView31" />
 
     <TextView
@@ -48,7 +48,7 @@
         android:layout_marginEnd="16dp"
         android:text="$100"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/fr_textView32"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fr_textView32" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

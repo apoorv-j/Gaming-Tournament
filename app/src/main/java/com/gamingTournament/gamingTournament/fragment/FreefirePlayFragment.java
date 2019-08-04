@@ -74,7 +74,6 @@ public class FreefirePlayFragment extends Fragment implements FreefirePlayAdapte
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 
         recyclerView.setLayoutManager(manager);
-        recyclerView.hasFixedSize();
 
         FreefirePlayViewModel model = ViewModelProviders.of(FreefirePlayFragment.this).get(FreefirePlayViewModel.class);
 
@@ -86,6 +85,7 @@ public class FreefirePlayFragment extends Fragment implements FreefirePlayAdapte
                     freefireMatchDetails = list_plays;
                     adapter = new FreefirePlayAdapter(FreefirePlayFragment.this, list_plays);
                     recyclerView.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
                 }
             }
         });
@@ -146,7 +146,17 @@ public class FreefirePlayFragment extends Fragment implements FreefirePlayAdapte
                 public void onClick(View v) {
                     progressDialog.show();
 
-                        switch (item.getTeamSize()) {
+                    int maxPlayers = Integer.parseInt(item.getMaxPlayers());
+                    int playersJoined = Integer.parseInt(item.getPlayerJoined());
+                    String teamSize = item.getTeamSize();
+
+                    if(maxPlayers-playersJoined==1)
+                        teamSize = "1";
+                    else if((maxPlayers-playersJoined==2)||(maxPlayers-playersJoined==3))
+                        teamSize = "2";
+
+
+                        switch (teamSize) {
                             case "1": //solo
                                 View ignView = getLayoutInflater().inflate(R.layout.dialog_ign_solo, null);
                                 final EditText player = ignView.findViewById(R.id.ign_edit_dialog_solo);
