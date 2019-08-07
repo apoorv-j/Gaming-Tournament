@@ -44,7 +44,7 @@ import retrofit2.Response;
  * A simple {@link Fragment} subclass.
  */
 public class PlayFragment extends Fragment implements PubgPlayAdapter.OnItemClickListener {
-
+    private String salt = "GT397PB";
     public PlayFragment() {
         // Required empty public constructor
     }
@@ -150,11 +150,13 @@ public class PlayFragment extends Fragment implements PubgPlayAdapter.OnItemClic
                     int playersJoined = Integer.parseInt(item.getPlayerJoined());
                     String teamSize = item.getTeamSize();
 
-                    if(maxPlayers-playersJoined==1)
-                        teamSize = "1";
-                    else if((maxPlayers-playersJoined==2)||(maxPlayers-playersJoined==3))
-                        teamSize = "2";
 
+                    if(teamSize.equals("4")||teamSize.equals("2")) {
+                        if (maxPlayers - playersJoined == 1)
+                            teamSize = "1";
+                        else if ((maxPlayers - playersJoined == 2) || (maxPlayers - playersJoined == 3))
+                            teamSize = "2";
+                    }
 
                     switch (teamSize) {
                         case "1": //solo
@@ -279,7 +281,7 @@ public class PlayFragment extends Fragment implements PubgPlayAdapter.OnItemClic
         mDialog.dismiss();
         progressDialog.show();
 
-        Call<ResponseBody> call = apiInterface.changeBalance("PB_PUBG",username,"sub",item.getEntryFee());
+        Call<ResponseBody> call = apiInterface.changeBalance(salt,username,"sub",item.getEntryFee());
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -287,7 +289,7 @@ public class PlayFragment extends Fragment implements PubgPlayAdapter.OnItemClic
                 try {
                     String result=response.body().string();
                     if (result.equals("success")) {
-                        Call<ResponseBody> call2 = apiInterface.addPubgPlayers("PB_PUBG",username,item.getTeamSize(),item.getMatchID(),playerNames);
+                        Call<ResponseBody> call2 = apiInterface.addPubgPlayers(salt,username,item.getTeamSize(),item.getMatchID(),playerNames);
                         call2.enqueue(new Callback<ResponseBody>() {
                             @Override
                             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {

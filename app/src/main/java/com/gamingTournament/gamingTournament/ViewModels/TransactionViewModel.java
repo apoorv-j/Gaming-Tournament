@@ -18,7 +18,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class TransactionViewModel extends ViewModel {
-    private String salt= "PB_PUBG";
+    private String salt= "GT397PB";
     //this is the data that will fetch asynchronously
     private MutableLiveData<List<list_transactions>> transactionList;
 

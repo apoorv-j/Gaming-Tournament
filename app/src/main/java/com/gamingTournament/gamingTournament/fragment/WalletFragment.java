@@ -34,7 +34,7 @@ import retrofit2.Response;
 import static com.paytm.pgsdk.easypay.listeners.GestureListener.TAG;
 
 public class WalletFragment extends Fragment implements View.OnClickListener{
-
+    private String salt = "GT397PB";
     public WalletFragment()
     {}
 
@@ -78,7 +78,7 @@ public class WalletFragment extends Fragment implements View.OnClickListener{
         user = SharedPrefManager.getInstance(getActivity()).getUser();
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<ResponseBody> call = apiInterface.getBalance("PB_PUBG",user.getUname());
+        Call<ResponseBody> call = apiInterface.getBalance(salt,user.getUname());
 
         call.enqueue(new Callback<ResponseBody>() {
             @Override
@@ -191,7 +191,7 @@ public class WalletFragment extends Fragment implements View.OnClickListener{
                                         @Override
                                         public void onClick(View v) {
                                             redeemAmount =editTextRedeemAmount.getText().toString();
-                                            if (redeemAmount.isEmpty() || Integer.parseInt(redeemAmount)<10) {
+                                            if (redeemAmount.isEmpty() || Integer.parseInt(redeemAmount)<30) {
                                                 editTextRedeemAmount.setError("Invalid Amount");
                                                 editTextRedeemAmount.requestFocus();
                                                 return;
@@ -236,7 +236,6 @@ public class WalletFragment extends Fragment implements View.OnClickListener{
         View passView = getLayoutInflater().inflate(R.layout.dialog_password,null);
         editTextPassword = passView.findViewById(R.id.password_dialog);
 
-
         TextView pCancel,nextBtnPass;
         pCancel = passView.findViewById(R.id.cancel_password_dialog);
         nextBtnPass = passView.findViewById(R.id.next_pass_btn);
@@ -260,8 +259,8 @@ public class WalletFragment extends Fragment implements View.OnClickListener{
                 progressDialog.show();
 
                 ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-                Log.e(TAG, "Redeem Response: "+"PB_PUBG"+user.getUname()+password+paytmNum2+redeemAmount );
-                Call<ResponseBody> call = apiInterface.redeemBalance("PB_PUBG",user.getUname(),password,paytmNum2,redeemAmount);
+                Log.e(TAG, "Redeem Response: "+salt+user.getUname()+password+paytmNum2+redeemAmount );
+                Call<ResponseBody> call = apiInterface.redeemBalance(salt,user.getUname(),password,paytmNum2,redeemAmount);
                 call.enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -287,7 +286,6 @@ public class WalletFragment extends Fragment implements View.OnClickListener{
                                 progressDialog.dismiss();
                                 Toast.makeText(getContext(), "Something Went Wrong", Toast.LENGTH_LONG).show();
                                 Util.changeDrawerFragment(getActivity(), new WalletFragment());
-
                             }
 
                         } catch (IOException e) {

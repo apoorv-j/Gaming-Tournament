@@ -48,6 +48,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class FreefireMatchDetailActivity extends FragmentActivity {
+    private String salt = "GT397PB";
     String posString;
     int position;
     private List<list_play> matchDetails;
@@ -98,7 +99,7 @@ public class FreefireMatchDetailActivity extends FragmentActivity {
                     e.printStackTrace();
                 }
 
-                Call<List<list_room_details>> call = apiInterface.freefireRoom("PB_PUBG",item.getMatchID(),user.getUname());
+                Call<List<list_room_details>> call = apiInterface.freefireRoom(salt,item.getMatchID(),user.getUname());
                 final String finalDateTime = dateTime1;
                 call.enqueue(new Callback<List<list_room_details>>() {
                     @Override
@@ -241,10 +242,13 @@ public class FreefireMatchDetailActivity extends FragmentActivity {
                     int playersJoined = Integer.parseInt(item.getPlayerJoined());
                     String teamSize = item.getTeamSize();
 
-                    if(maxPlayers-playersJoined==1)
-                        teamSize = "1";
-                    else if((maxPlayers-playersJoined==2)||(maxPlayers-playersJoined==3))
-                        teamSize = "2";
+
+                    if(teamSize.equals("4")||teamSize.equals("2")) {
+                        if (maxPlayers - playersJoined == 1)
+                            teamSize = "1";
+                        else if ((maxPlayers - playersJoined == 2) || (maxPlayers - playersJoined == 3))
+                            teamSize = "2";
+                    }
 
 
                     switch (teamSize) {
@@ -351,7 +355,7 @@ public class FreefireMatchDetailActivity extends FragmentActivity {
         mDialog.dismiss();
         progressDialog.show();
 
-        Call<ResponseBody> call = apiInterface.changeBalance("PB_PUBG",username,"sub",item.getEntryFee());
+        Call<ResponseBody> call = apiInterface.changeBalance(salt,username,"sub",item.getEntryFee());
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -359,7 +363,7 @@ public class FreefireMatchDetailActivity extends FragmentActivity {
                 try {
                     String result=response.body().string();
                     if (result.equals("success")) {
-                        Call<ResponseBody> call2 = apiInterface.addFreefirePlayers("PB_PUBG",username,item.getTeamSize(),item.getMatchID(),playerNames);
+                        Call<ResponseBody> call2 = apiInterface.addFreefirePlayers(salt,username,item.getTeamSize(),item.getMatchID(),playerNames);
                         call2.enqueue(new Callback<ResponseBody>() {
                             @Override
                             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {

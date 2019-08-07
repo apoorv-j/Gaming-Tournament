@@ -23,7 +23,7 @@ import static android.content.ContentValues.TAG;
 
 public class LudoPlayViewModel extends ViewModel {
 
-    private String salt= "PB_PUBG";
+    private String salt= "GT397PB";
     //this is the data that will fetch asynchronously
     private MutableLiveData<List<list_play>> ludoMatchList;
 
@@ -55,7 +55,7 @@ public class LudoPlayViewModel extends ViewModel {
         progressDoalog.show();
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<List<list_play>> call = apiInterface.matchDetailsLudo("PB_PUBG");
+        Call<List<list_play>> call = apiInterface.matchDetailsLudo(salt);
         call.enqueue(new Callback<List<list_play>>() {
             @Override
             public void onResponse(@NonNull Call<List<list_play>> call, @NonNull Response<List<list_play>> response) {

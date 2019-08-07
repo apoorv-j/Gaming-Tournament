@@ -26,7 +26,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class PasswordResetActivity extends AppCompatActivity implements View.OnClickListener {
-
+    private String salt = "GT397PB";
     EditText editTextusername,editTextOTP,editTextPassword;
     ScrollView scrollView;
     LinearLayout linearLayout,linearOTP,linearPass;
@@ -65,7 +65,7 @@ public class PasswordResetActivity extends AppCompatActivity implements View.OnC
                 final String otp = String.valueOf(random.nextInt(8999)+1000);
                 final String username=editTextusername.getText().toString();
                 Log.e("OTP:",otp );
-                Call<ResponseBody> call = apiInterface.sendOTP("PB_PUBG",username,otp);
+                Call<ResponseBody> call = apiInterface.sendOTP(salt,username,otp);
                 call.enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -93,7 +93,7 @@ public class PasswordResetActivity extends AppCompatActivity implements View.OnC
                                             ResetBtn.setOnClickListener(new View.OnClickListener() {
                                                 @Override
                                                 public void onClick(View v) {
-                                                    Call<ResponseBody> call1 = apiInterface.resetPass("PB_PUBG",username,editTextPassword.getText().toString());
+                                                    Call<ResponseBody> call1 = apiInterface.resetPass(salt,username,editTextPassword.getText().toString());
                                                     call1.enqueue(new Callback<ResponseBody>() {
                                                         @Override
                                                         public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {

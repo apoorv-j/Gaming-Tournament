@@ -24,7 +24,7 @@ import static android.content.ContentValues.TAG;
 
 public class TopPlayerViewModel extends ViewModel {
 
-    private String salt= "PB_PUBG";
+    private String salt= "GT397PB";
     //this is the data that will fetch asynchronously
     private MutableLiveData<List<list_top_players>> topPlayers;
 

@@ -36,13 +36,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import static android.content.ContentValues.TAG;
 
 public class Payment implements PaytmPaymentTransactionCallback {
-
+    private String salt = "GT397PB";
     private Context context;
     private Paytm paytm;
     private Retrofit retrofit;
     private PaytmApi apiService;
     private String username;
-    ProgressDialog progressDoalog;
+    private ProgressDialog progressDoalog;
 
 
     public Payment(Context context) {
@@ -196,7 +196,7 @@ public class Payment implements PaytmPaymentTransactionCallback {
         Log.e(TAG, "updateBalance: "+amount );
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<ResponseBody> call = apiInterface.changeBalance("PB_PUBG",username,"add",amount);
+        Call<ResponseBody> call = apiInterface.changeBalance(salt,username,"add",amount);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {

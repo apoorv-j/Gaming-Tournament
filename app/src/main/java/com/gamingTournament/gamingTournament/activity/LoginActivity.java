@@ -29,7 +29,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
-
+    private String salt = "GT397PB";
     private AutoCompleteTextView editTextUsername;
     private EditText editTextPassword;
     TextView SignIn,gtSignUp,forgotPass;
@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<List<Users>> call = apiInterface.getUser(username,password,"PB_PUBG");
+        Call<List<Users>> call = apiInterface.getUser(username,password,salt);
         call.enqueue(new Callback<List<Users>>() {
             @Override
             public void onResponse(Call<List<Users>> call, Response<List<Users>> response) {

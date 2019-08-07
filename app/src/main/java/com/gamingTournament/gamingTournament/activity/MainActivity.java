@@ -55,6 +55,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class MainActivity extends FragmentActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, MainAdapter.OnItemClickListener {
+        private String salt = "GT397PB";
         private ImageView image;
         private int n=0;
         private DrawerLayout drawer;
@@ -118,14 +119,13 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 }
             });
 
-
        }
 
     public Users getUserBalance() {
 
         user = SharedPrefManager.getInstance(MainActivity.this).getUser();
 
-        Call<ResponseBody> call = apiInterface.getBalance("PB_PUBG",user.getUname());
+        Call<ResponseBody> call = apiInterface.getBalance(salt,user.getUname());
 
         call.enqueue(new Callback<ResponseBody>() {
             @Override
@@ -168,7 +168,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     protected void onStart() {
         super.onStart();
 
-        Call<List<update_details>> call = apiInterface.updateDetails("PB_PUBG");
+        Call<List<update_details>> call = apiInterface.updateDetails(salt);
         call.enqueue(new Callback<List<update_details>>() {
             @Override
             public void onResponse(Call<List<update_details>> call, Response<List<update_details>> response) {

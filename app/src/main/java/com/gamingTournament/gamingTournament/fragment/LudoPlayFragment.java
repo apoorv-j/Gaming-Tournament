@@ -42,7 +42,7 @@ import retrofit2.Response;
 
 
 public class LudoPlayFragment extends Fragment implements LudoPlayAdapter.OnItemClickListener {
-
+    private String salt = "GT397PB";
     public LudoPlayFragment() {
         // Required empty public constructor
     }
@@ -181,7 +181,7 @@ public class LudoPlayFragment extends Fragment implements LudoPlayAdapter.OnItem
         mDialog.dismiss();
         progressDialog.show();
 
-        Call<ResponseBody> call = apiInterface.changeBalance("PB_PUBG",username,"sub",item.getEntryFee());
+        Call<ResponseBody> call = apiInterface.changeBalance(salt,username,"sub",item.getEntryFee());
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -189,7 +189,7 @@ public class LudoPlayFragment extends Fragment implements LudoPlayAdapter.OnItem
                 try {
                     String result=response.body().string();
                     if (result.equals("success")) {
-                        Call<ResponseBody> call2 = apiInterface.addLudoPlayers("PB_PUBG",username,item.getMatchID(),playerNames);
+                        Call<ResponseBody> call2 = apiInterface.addLudoPlayers(salt,username,item.getMatchID(),playerNames);
                         call2.enqueue(new Callback<ResponseBody>() {
                             @Override
                             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {

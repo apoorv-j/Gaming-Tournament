@@ -24,7 +24,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener{
-
+    private String salt = "GT397PB";
     private AutoCompleteTextView editTextfullname,editTextusername,editTextemail,editTextphNumber;
     private EditText editTextpassword;
     private TextView SignUp,gtSignIn;
@@ -106,7 +106,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 
 
-        Call<ResponseBody> call = apiInterface.createUser("PB_PUBG",username,password,name,phNumber,email);
+        Call<ResponseBody> call = apiInterface.createUser(salt,username,password,name,phNumber,email);
 
         call.enqueue(new Callback<ResponseBody>() {
             @Override

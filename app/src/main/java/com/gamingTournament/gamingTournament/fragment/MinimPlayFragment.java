@@ -44,7 +44,7 @@ import retrofit2.Response;
  * A simple {@link Fragment} subclass.
  */
 public class MinimPlayFragment extends Fragment implements MinimPlayAdapter.OnItemClickListener {
-
+    private String salt = "GT397PB";
     public MinimPlayFragment() {
         // Required empty public constructor
     }
@@ -174,7 +174,7 @@ public class MinimPlayFragment extends Fragment implements MinimPlayAdapter.OnIt
         mDialog.dismiss();
         progressDialog.show();
 
-        Call<ResponseBody> call = apiInterface.changeBalance("PB_PUBG",username,"sub",item.getEntryFee());
+        Call<ResponseBody> call = apiInterface.changeBalance(salt,username,"sub",item.getEntryFee());
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -182,7 +182,7 @@ public class MinimPlayFragment extends Fragment implements MinimPlayAdapter.OnIt
                 try {
                     String result=response.body().string();
                     if (result.equals("success")) {
-                        Call<ResponseBody> call2 = apiInterface.addMinimPlayers("PB_PUBG",username,item.getMatchID(),playerNames);
+                        Call<ResponseBody> call2 = apiInterface.addMinimPlayers(salt,username,item.getMatchID(),playerNames);
                         call2.enqueue(new Callback<ResponseBody>() {
                             @Override
                             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {

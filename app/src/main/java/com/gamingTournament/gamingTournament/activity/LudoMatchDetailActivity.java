@@ -49,7 +49,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class LudoMatchDetailActivity extends AppCompatActivity {
-
+    private String salt = "GT397PB";
     String posString;
     int position;
     private List<list_play> matchDetails;
@@ -102,7 +102,7 @@ public class LudoMatchDetailActivity extends AppCompatActivity {
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-                Call<List<list_room_details>> call = apiInterface.ludoRoom("PB_PUBG",item.getMatchID(),user.getUname());
+                Call<List<list_room_details>> call = apiInterface.ludoRoom(salt,item.getMatchID(),user.getUname());
                 final String finalDateTime = dateTime1;
                 call.enqueue(new Callback<List<list_room_details>>() {
                     @Override
@@ -273,7 +273,7 @@ public class LudoMatchDetailActivity extends AppCompatActivity {
         mDialog.dismiss();
         progressDialog.show();
 
-        Call<ResponseBody> call = apiInterface.changeBalance("PB_PUBG",username,"sub",item.getEntryFee());
+        Call<ResponseBody> call = apiInterface.changeBalance(salt,username,"sub",item.getEntryFee());
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -281,7 +281,7 @@ public class LudoMatchDetailActivity extends AppCompatActivity {
                 try {
                     String result=response.body().string();
                     if (result.equals("success")) {
-                        Call<ResponseBody> call2 = apiInterface.addLudoPlayers("PB_PUBG",username,item.getMatchID(),playerNames);
+                        Call<ResponseBody> call2 = apiInterface.addLudoPlayers(salt,username,item.getMatchID(),playerNames);
                         call2.enqueue(new Callback<ResponseBody>() {
                             @Override
                             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {

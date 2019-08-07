@@ -31,7 +31,7 @@ import retrofit2.Response;
  * A simple {@link Fragment} subclass.
  */
 public class ProfileFragment extends Fragment {
-
+    private String salt = "GT397PB";
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -76,7 +76,7 @@ public class ProfileFragment extends Fragment {
                 oldPass=editTextOldPass.getText().toString();
                 newPass=editTextNewPass.getText().toString();
                 ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-                Call<ResponseBody> call = apiInterface.changePass("PB_PUBG",user.getUname(),oldPass,newPass);
+                Call<ResponseBody> call = apiInterface.changePass(salt,user.getUname(),oldPass,newPass);
                 call.enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {

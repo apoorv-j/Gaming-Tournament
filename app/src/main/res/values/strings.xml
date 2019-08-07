@@ -136,24 +136,26 @@ Ludo king, Mini militia , Free fire and PUBG Mobile, a Trending Game. Users can 
 
     <!--Refund Policy-->
     <string name="refund_policy">
-<b>1. </b><p>The amount you request to withdraw should be in your wallet
+<b>1. </b>Transaction charges 3% applicable on each and every redeem request . For eg :- withdraw amount = 100rs - 3% = 97rs  will reflect on your paytm passbook .\n
+<b>2. </b>Withdraw money will be transfered to your paytm wallet within 1-2 working days .\n
+<b>3. </b><p>The amount you request to withdraw should be in your wallet
 to make a request, and the amount that is in your wallet
 should have added by payment portal/Friend Transfer/
         Game Winnings only.</p> \n
-<b>2. </b>The amount you request will be transferred to your paytm
+<b>4. </b>The amount you request will be transferred to your paytm
 account within a day, if there is a delay in the payment you
 will be noticed as soon as possible.\n
-<b>3. </b>Once requested a withdraw request you cannot cancel the
+<b>5. </b>Once requested a withdraw request you cannot cancel the
 transaction and the amount will be deducted from your
 wallet.\n
-<b>4. </b>If the transaction is declined the amount will be sent
+<b>6. </b>If the transaction is declined the amount will be sent
 immediately into your wallet and you can request again.\n
-<b>5. </b>If you are found hacking/Violating any rules and regulations
+<b>7. </b>If you are found hacking/Violating any rules and regulations
 of the app which may harm the app environment your
 account and balance will be terminated.\n
-<b>6. </b>Make sure you have done KYC and other required
+<b>8. </b>Make sure you have done KYC and other required
 verifications for accepting payments on your paytm number.\n
-<b>7. </b>If you enter wrong paytm number and make a withdraw
+<b>9. </b>If you enter wrong paytm number and make a withdraw
 request and the payment is made by the admin, the admin
 won’t be liable for the same, no refund will be processed in
 such cases.\n
